@@ -1,0 +1,555 @@
+@charset "UTF-8";
+/*! sanitize.css v3.2.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+/*
+ * Normalization
+ */
+/* line 9, source/stylesheets/_init.scss */
+audio:not([controls]) {
+  display: none;
+  /* Chrome 44-, iOS 8+, Safari 9+ */ }
+
+/* line 13, source/stylesheets/_init.scss */
+button {
+  -webkit-appearance: button;
+  /* iOS 8+ */
+  overflow: visible;
+  /* Internet Explorer 11- */ }
+
+/* line 18, source/stylesheets/_init.scss */
+details {
+  display: block;
+  /* Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */ }
+
+/* line 22, source/stylesheets/_init.scss */
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* Edge 12+, Internet Explorer 11- */
+  overflow-y: scroll;
+  /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  /* iOS 8+ */ }
+
+/* line 28, source/stylesheets/_init.scss */
+input {
+  -webkit-border-radius: 0; }
+
+/* line 32, source/stylesheets/_init.scss */
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* iOS 8+ */ }
+
+/* line 38, source/stylesheets/_init.scss */
+input[type="number"] {
+  width: auto;
+  /* Firefox 36+ */ }
+
+/* line 42, source/stylesheets/_init.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Chrome 45+, Safari 9+ */ }
+
+/* line 46, source/stylesheets/_init.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Chrome 45+, Safari 9+ */ }
+
+/* line 51, source/stylesheets/_init.scss */
+main {
+  display: block;
+  /* Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+ */ }
+
+/* line 55, source/stylesheets/_init.scss */
+pre {
+  overflow: auto;
+  /* Internet Explorer 11- */ }
+
+/* line 59, source/stylesheets/_init.scss */
+progress {
+  display: inline-block;
+  /* Internet Explorer 11-, Windows Phone 8.1+ */ }
+
+/* line 63, source/stylesheets/_init.scss */
+small {
+  font-size: 75%;
+  /* All browsers */ }
+
+/* line 67, source/stylesheets/_init.scss */
+summary {
+  display: block;
+  /* Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */ }
+
+/* line 71, source/stylesheets/_init.scss */
+svg:not(:root) {
+  overflow: hidden;
+  /* Internet Explorer 11- */ }
+
+/* line 75, source/stylesheets/_init.scss */
+template {
+  display: none;
+  /* Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+ */ }
+
+/* line 79, source/stylesheets/_init.scss */
+textarea {
+  overflow: auto;
+  /* Edge 12+, Internet Explorer 11- */ }
+
+/* line 83, source/stylesheets/_init.scss */
+[hidden] {
+  display: none;
+  /* Internet Explorer 10- */ }
+
+/*
+ * Universal inheritance
+ */
+/* line 91, source/stylesheets/_init.scss */
+*,
+:before,
+:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+/* line 97, source/stylesheets/_init.scss */
+* {
+  font-size: inherit;
+  line-height: inherit; }
+
+/* line 102, source/stylesheets/_init.scss */
+:before,
+:after {
+  text-decoration: inherit;
+  vertical-align: inherit; }
+
+/*
+ * Opinionated defaults
+ */
+/* specify the border style and width of all elements */
+/* line 116, source/stylesheets/_init.scss */
+*,
+:before,
+:after {
+  border-style: solid;
+  border-width: 0; }
+
+/* specify the core styles of all elements */
+/* line 125, source/stylesheets/_init.scss */
+* {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0; }
+
+/* specify the root styles of the document */
+/* line 133, source/stylesheets/_init.scss */
+:root {
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #000000;
+  cursor: default;
+  font: 100%/1.5 sans-serif; }
+
+/* specify the text decoration of anchors */
+/* line 143, source/stylesheets/_init.scss */
+a {
+  text-decoration: none; }
+
+/* specify the alignment of media elements */
+/* line 149, source/stylesheets/_init.scss */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/* specify the background color of form elements */
+/* line 160, source/stylesheets/_init.scss */
+button,
+input,
+select,
+textarea {
+  background-color: transparent; }
+
+/* specify the inherited color and font of form elements */
+/* line 169, source/stylesheets/_init.scss */
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+/* specify the minimum height of form elements */
+/* line 181, source/stylesheets/_init.scss */
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+  min-height: 1.5em; }
+
+/* specify the font family of code elements */
+/* line 205, source/stylesheets/_init.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; }
+
+/* specify the list style of nav lists */
+/* line 214, source/stylesheets/_init.scss */
+nav ol,
+nav ul {
+  list-style: none; }
+
+/* specify the standard appearance of selects */
+/* line 221, source/stylesheets/_init.scss */
+select {
+  -moz-appearance: none;
+  /* Firefox 40+ */
+  -webkit-appearance: none; }
+
+/* line 226, source/stylesheets/_init.scss */
+select::-ms-expand {
+  display: none;
+  /* Edge 12+, Internet Explorer 11- */ }
+
+/* line 230, source/stylesheets/_init.scss */
+select::-ms-value {
+  color: currentColor;
+  /* Edge 12+, Internet Explorer 11- */ }
+
+/* specify the border styling of tables */
+/* line 236, source/stylesheets/_init.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* specify the resizability of textareas */
+/* line 243, source/stylesheets/_init.scss */
+textarea {
+  resize: vertical; }
+
+/* specify the background color, font color, and drop shadow of text selections */
+/* line 249, source/stylesheets/_init.scss */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* required when declaring ::selection */
+  color: #ffffff;
+  text-shadow: none; }
+
+/* line 255, source/stylesheets/_init.scss */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* required when declaring ::selection */
+  color: #ffffff;
+  text-shadow: none; }
+::selection {
+  background-color: #b3d4fc;
+  /* required when declaring ::selection */
+  color: #ffffff;
+  text-shadow: none; }
+
+/* specify the progress cursor of updating elements */
+/* line 263, source/stylesheets/_init.scss */
+[aria-busy="true"] {
+  cursor: progress; }
+
+/* specify the pointer cursor of trigger elements */
+/* line 269, source/stylesheets/_init.scss */
+[aria-controls] {
+  cursor: pointer; }
+
+/* specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+/* line 275, source/stylesheets/_init.scss */
+[aria-disabled] {
+  cursor: default; }
+
+/* specify the style of visually hidden yet accessible elements */
+/* line 281, source/stylesheets/_init.scss */
+[hidden][aria-hidden="false"] {
+  clip: rect(0 0 0 0);
+  display: inherit;
+  position: absolute; }
+
+/* line 287, source/stylesheets/_init.scss */
+[hidden][aria-hidden="false"]:focus {
+  clip: auto; }
+
+/* remove delay from tapping on clickable elements */
+/* line 293, source/stylesheets/_init.scss */
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation; }
+/* line 6, source/stylesheets/_index.scss */
+body, html {
+  height: 100%;
+  background: white;
+  color: #444; }
+
+/* line 12, source/stylesheets/_index.scss */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none; }
+
+/* line 22, source/stylesheets/_index.scss */
+.wrapper {
+  display: flex;
+  height: 100%; }
+  /* line 25, source/stylesheets/_index.scss */
+  .wrapper .stock {
+    flex-basis: 33%;
+    height: 100%; }
+  /* line 29, source/stylesheets/_index.scss */
+  .wrapper .tab_wrap {
+    flex-basis: 67%;
+    height: 100%; }
+
+/* line 1, source/stylesheets/_stock.scss */
+.stock {
+  border: 1px solid #d6d6d6;
+  display: flex;
+  flex-direction: column; }
+  /* line 6, source/stylesheets/_stock.scss */
+  .stock-head {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 20px 12%;
+    color: #20AEE4; }
+  /* line 14, source/stylesheets/_stock.scss */
+  .stock-body {
+    border: 1px solid #d6d6d6;
+    border-right: none;
+    overflow: hidden; }
+    /* line 23, source/stylesheets/_stock.scss */
+    .stock-body-panel {
+      padding: 20px 12%;
+      display: flex;
+      flex-direction: row;
+      position: relative; }
+      /* line 31, source/stylesheets/_stock.scss */
+      .stock-body-panel-wrapper {
+        width: 100%; }
+      /* line 34, source/stylesheets/_stock.scss */
+      .stock-body-panel-remove {
+        position: absolute;
+        right: -60px;
+        top: -0px;
+        width: 60px;
+        height: 100%;
+        background: #f95555;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 12px; }
+      /* line 49, source/stylesheets/_stock.scss */
+      .stock-body-panel-head {
+        display: flex; }
+        /* line 51, source/stylesheets/_stock.scss */
+        .stock-body-panel-head .name {
+          font-size: 18px; }
+        /* line 54, source/stylesheets/_stock.scss */
+        .stock-body-panel-head .time {
+          margin-left: auto;
+          color: #aaa; }
+      /* line 60, source/stylesheets/_stock.scss */
+      .stock-body-panel-body {
+        display: flex;
+        align-items: center;
+        margin-top: 10px; }
+        /* line 64, source/stylesheets/_stock.scss */
+        .stock-body-panel-body .num {
+          padding: 8px 10px;
+          padding-left: 30px;
+          border: 1px solid #d6d6d6;
+          border-radius: 4px; }
+        /* line 70, source/stylesheets/_stock.scss */
+        .stock-body-panel-body .mult {
+          margin: 0 10px;
+          color: #999;
+          font-size: 20px; }
+        /* line 75, source/stylesheets/_stock.scss */
+        .stock-body-panel-body .value {
+          padding: 8px 10px;
+          padding-left: 80px;
+          border: 1px solid #d6d6d6;
+          border-radius: 4px; }
+          /* line 80, source/stylesheets/_stock.scss */
+          .stock-body-panel-body .value::before {
+            content: "¥"; }
+  /* line 89, source/stylesheets/_stock.scss */
+  .stock-foot {
+    padding: 20px 12%;
+    border: 1px solid #d6d6d6;
+    border-right: none;
+    height: 80px;
+    margin-top: auto;
+    display: flex;
+    align-items: center; }
+    /* line 97, source/stylesheets/_stock.scss */
+    .stock-foot .sum_num {
+      font-size: 18px; }
+      /* line 99, source/stylesheets/_stock.scss */
+      .stock-foot .sum_num::after {
+        color: #aaa;
+        font-size: 12px;
+        content: "点"; }
+    /* line 105, source/stylesheets/_stock.scss */
+    .stock-foot .sum_value {
+      margin-left: auto;
+      font-size: 24px; }
+      /* line 108, source/stylesheets/_stock.scss */
+      .stock-foot .sum_value::before {
+        content: "¥"; }
+      /* line 111, source/stylesheets/_stock.scss */
+      .stock-foot .sum_value::after {
+        color: #aaa;
+        font-size: 12px;
+        content: "(税込)"; }
+
+/* line 2, source/stylesheets/_tab.scss */
+.tab_wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+/* line 12, source/stylesheets/_tab.scss */
+input[type="radio"] {
+  display: none; }
+
+/* line 16, source/stylesheets/_tab.scss */
+.tab_area {
+  font-size: 0;
+  border-top: solid 1px #d6d6d6;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #d6d6d6; }
+  /* line 29, source/stylesheets/_tab.scss */
+  .tab_area .tab_area_wrapper {
+    width: 80%; }
+
+/* line 34, source/stylesheets/_tab.scss */
+.tab_area label {
+  width: 33%;
+  display: inline-block;
+  padding: 12px 0;
+  color: #20AEE4;
+  text-align: center;
+  font-size: 13px;
+  border: solid 1px #20AEE4; }
+
+/* line 44, source/stylesheets/_tab.scss */
+.tab1_label {
+  border-radius: 30px 0 0 30px;
+  border-right: none !important; }
+
+/* line 48, source/stylesheets/_tab.scss */
+.tab3_label {
+  border-radius: 0 30px 30px 0;
+  border-left: none !important; }
+
+/* line 53, source/stylesheets/_tab.scss */
+.tab_area label:hover {
+  opacity: 0.5; }
+
+/* line 57, source/stylesheets/_tab.scss */
+.panel_area {
+  width: 100%;
+  height: 100%;
+  background: #fff; }
+
+/* line 63, source/stylesheets/_tab.scss */
+.tab_panel {
+  width: 100%;
+  height: 100%;
+  display: none; }
+
+/* line 70, source/stylesheets/_tab.scss */
+.tab_panel p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: center; }
+
+/* line 79, source/stylesheets/_tab.scss */
+#tab1:checked ~ .tab_area .tab1_label {
+  background: #20AEE4;
+  color: white; }
+
+/* line 80, source/stylesheets/_tab.scss */
+#tab1:checked ~ .panel_area #panel1 {
+  display: block; }
+
+/* line 81, source/stylesheets/_tab.scss */
+#tab2:checked ~ .tab_area .tab2_label {
+  background: #20AEE4;
+  color: white; }
+
+/* line 82, source/stylesheets/_tab.scss */
+#tab2:checked ~ .panel_area #panel2 {
+  display: block; }
+
+/* line 83, source/stylesheets/_tab.scss */
+#tab3:checked ~ .tab_area .tab3_label {
+  background: #20AEE4;
+  color: white; }
+
+/* line 84, source/stylesheets/_tab.scss */
+#tab3:checked ~ .panel_area #panel3 {
+  display: block; }
+
+/* line 1, source/stylesheets/_kaikei.scss */
+.kaikei {
+  text-decoration: none;
+  list-style: none; }
+  /* line 6, source/stylesheets/_kaikei.scss */
+  .kaikei-item {
+    border-bottom: 1px solid #d6d6d6;
+    display: flex;
+    padding: 20px 12%;
+    color: #555; }
+    /* line 14, source/stylesheets/_kaikei.scss */
+    .kaikei-item .value {
+      margin-left: auto; }
+      /* line 16, source/stylesheets/_kaikei.scss */
+      .kaikei-item .value::before {
+        content: "･･･　¥"; }
