@@ -450,11 +450,7 @@ body {
   align-items: center;
   flex-direction: column; }
 
-/* line 12, source/stylesheets/_tab.scss */
-input[type="radio"] {
-  display: none; }
-
-/* line 16, source/stylesheets/_tab.scss */
+/* line 13, source/stylesheets/_tab.scss */
 .tab_area {
   font-size: 0;
   border-top: solid 1px #d6d6d6;
@@ -464,78 +460,47 @@ input[type="radio"] {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #d6d6d6; }
-  /* line 29, source/stylesheets/_tab.scss */
+  /* line 24, source/stylesheets/_tab.scss */
   .tab_area .tab_area_wrapper {
     width: 80%; }
-
-/* line 34, source/stylesheets/_tab.scss */
-.tab_area label {
-  width: 33%;
-  display: inline-block;
-  padding: 12px 0;
-  color: #20AEE4;
-  text-align: center;
-  font-size: 13px;
-  border: solid 1px #20AEE4; }
-
-/* line 44, source/stylesheets/_tab.scss */
-.tab1_label {
-  border-radius: 30px 0 0 30px;
-  border-right: none !important; }
-
-/* line 48, source/stylesheets/_tab.scss */
-.tab3_label {
-  border-radius: 0 30px 30px 0;
-  border-left: none !important; }
-
-/* line 53, source/stylesheets/_tab.scss */
-.tab_area label:hover {
-  opacity: 0.5; }
+    /* line 26, source/stylesheets/_tab.scss */
+    .tab_area .tab_area_wrapper .label {
+      width: 33%;
+      display: inline-block;
+      padding: 12px 0;
+      color: #20AEE4;
+      text-align: center;
+      font-size: 13px;
+      border: solid 1px #20AEE4; }
+    /* line 36, source/stylesheets/_tab.scss */
+    .tab_area .tab_area_wrapper .active {
+      background-color: #20AEE4;
+      color: white; }
+    /* line 41, source/stylesheets/_tab.scss */
+    .tab_area .tab_area_wrapper .tab1_label {
+      border-radius: 30px 0 0 30px;
+      border-right: none !important; }
+    /* line 45, source/stylesheets/_tab.scss */
+    .tab_area .tab_area_wrapper .tab3_label {
+      border-radius: 0 30px 30px 0;
+      border-left: none !important; }
+    /* line 49, source/stylesheets/_tab.scss */
+    .tab_area .tab_area_wrapper .tab_area label:hover {
+      opacity: 0.5; }
 
 /* line 57, source/stylesheets/_tab.scss */
 .panel_area {
   width: 100%;
   height: 100%;
   background: #fff; }
-
-/* line 63, source/stylesheets/_tab.scss */
-.tab_panel {
-  width: 100%;
-  height: 100%;
-  display: none; }
-
-/* line 70, source/stylesheets/_tab.scss */
-.tab_panel p {
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-align: center; }
-
-/* line 79, source/stylesheets/_tab.scss */
-#tab1:checked ~ .tab_area .tab1_label {
-  background: #20AEE4;
-  color: white; }
-
-/* line 80, source/stylesheets/_tab.scss */
-#tab1:checked ~ .panel_area #panel1 {
-  display: block; }
-
-/* line 81, source/stylesheets/_tab.scss */
-#tab2:checked ~ .tab_area .tab2_label {
-  background: #20AEE4;
-  color: white; }
-
-/* line 82, source/stylesheets/_tab.scss */
-#tab2:checked ~ .panel_area #panel2 {
-  display: block; }
-
-/* line 83, source/stylesheets/_tab.scss */
-#tab3:checked ~ .tab_area .tab3_label {
-  background: #20AEE4;
-  color: white; }
-
-/* line 84, source/stylesheets/_tab.scss */
-#tab3:checked ~ .panel_area #panel3 {
-  display: block; }
+  /* line 61, source/stylesheets/_tab.scss */
+  .panel_area .tab_panel {
+    width: 100%;
+    height: 100%;
+    display: none; }
+  /* line 66, source/stylesheets/_tab.scss */
+  .panel_area .show {
+    display: block; }
 
 /* line 1, source/stylesheets/_kaikei.scss */
 .kaikei {

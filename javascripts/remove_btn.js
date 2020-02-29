@@ -1,6 +1,3 @@
-
-
-
 mouseX = 0
 mousedown = false
 $('body').on("mousemove", (e)=> {
