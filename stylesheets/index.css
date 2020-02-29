@@ -456,48 +456,49 @@ body {
   height: 120px;
   margin-top: 120px;
   border-bottom: solid 1px #d6d6d6;
+  border-bottom: solid 1px red;
   display: flex;
   align-items: center;
   justify-content: center; }
-  /* line 22, source/stylesheets/_tab.scss */
+  /* line 23, source/stylesheets/_tab.scss */
   .tab_area .tab_area_wrapper {
     display: flex;
     width: 80%;
     text-align: center; }
-    /* line 27, source/stylesheets/_tab.scss */
+    /* line 28, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .label {
       color: #20AEE4;
       padding: 12px 10px;
       width: 33.3333%;
       border: solid 1px #20AEE4;
       font-size: 14px; }
-    /* line 37, source/stylesheets/_tab.scss */
+    /* line 38, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .active {
       background-color: #20AEE4;
       color: white; }
-    /* line 42, source/stylesheets/_tab.scss */
+    /* line 43, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .tab1_label {
       border-radius: 30px 0 0 30px;
       border-right: none !important; }
-    /* line 46, source/stylesheets/_tab.scss */
+    /* line 47, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .tab3_label {
       border-radius: 0 30px 30px 0;
       border-left: none !important; }
-    /* line 50, source/stylesheets/_tab.scss */
+    /* line 51, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .tab_area label:hover {
       opacity: 0.5; }
 
-/* line 58, source/stylesheets/_tab.scss */
+/* line 59, source/stylesheets/_tab.scss */
 .panel_area {
   width: 100%;
   height: 100%;
   background: #fff; }
-  /* line 62, source/stylesheets/_tab.scss */
+  /* line 63, source/stylesheets/_tab.scss */
   .panel_area .tab_panel {
     width: 100%;
     height: 100%;
     display: none; }
-  /* line 67, source/stylesheets/_tab.scss */
+  /* line 68, source/stylesheets/_tab.scss */
   .panel_area .show {
     display: block; }
 
