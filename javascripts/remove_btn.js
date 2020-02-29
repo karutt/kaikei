@@ -38,14 +38,14 @@ tab_event = (down, move, up) => {
     if(mousedown) {
       if($(target).hasClass("open")) {
 
-        $(target).animate({right: '0px'}, 30);
+        $(target).animate({right: '0px'}, 0);
         $(target).removeClass("open")
 
       } else {
         if (mouseX - e.pageX < 20) {
-          $(target).animate({right: '0px'}, 30);
+          $(target).animate({right: '0px'}, 0);
         } else {
-          $(target).animate({right: '60px'}, 30);
+          $(target).animate({right: '60px'}, 0);
           $(target).addClass("open")
         }
       }
