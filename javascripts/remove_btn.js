@@ -2,50 +2,51 @@ tab_event = (down, move, up) => {
 
   mouseX = 0
   mousedown = false
+  target = 0
 
-  $('body').on(move, (e)=> {
+  $('.stock-body').on(move, ".stock-body-panel", function(e) {
     if(mousedown) {
       d = mouseX - e.pageX
 
-      if($('.stock-body-panel').hasClass("open")) {
+      if($(this).hasClass("open")) {
         if(-60<=d && d<=0) {
-          $('.stock-body-panel').css({right:  d+60+'px'});
+          $(target).css({right:  d+60+'px'});
         } else if (d<-60) {
-          $('.stock-body-panel').css({right:  0+'px'});
+          $(target).css({right:  0+'px'});
         } else {
-          $('.stock-body-panel').css({right:  60+'px'});
+          $(target).css({right:  60+'px'});
         }
       } else {
         if(0<=d && d<=60) {
-          $('.stock-body-panel').css({right:  d+'px'});
+          $(target).css({right:  d+'px'});
         } else if(d>60) {
-          $('.stock-body-panel').css({right:  60+'px'});
+          $(target).css({right:  60+'px'});
         } else {
-          $('.stock-body-panel').css({right:  0+'px'});
+          $(target).css({right:  0+'px'});
         }
-
       }
     }
   })
 
-  $('.stock-body-panel').on(down, (e)=> {
+  $('.stock-body').on(down, ".stock-body-panel", function(e) {
     mouseX = e.pageX
     mousedown = true
+    target = this
   })
 
   $("body").on(up, (e)=> {
     if(mousedown) {
-      if($('.stock-body-panel').hasClass("open")) {
+      if($(target).hasClass("open")) {
 
-        $('.stock-body-panel').animate({right: '0px'}, 30);
-        $('.stock-body-panel').removeClass("open")
+        $(target).animate({right: '0px'}, 30);
+        $(target).removeClass("open")
 
       } else {
         if (mouseX - e.pageX < 20) {
-          $('.stock-body-panel').animate({right: '0px'}, 30);
+          $(target).animate({right: '0px'}, 30);
         } else {
-          $('.stock-body-panel').animate({right: '60px'}, 30);
-          $('.stock-body-panel').addClass("open")
+          $(target).animate({right: '60px'}, 30);
+          $(target).addClass("open")
         }
       }
       mousedown = false
