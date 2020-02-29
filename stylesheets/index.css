@@ -355,14 +355,24 @@ body {
     overflow: hidden; }
     /* line 23, source/stylesheets/_stock.scss */
     .stock-body-panel {
-      padding: 20px 12%;
       display: flex;
       flex-direction: row;
-      position: relative; }
+      position: relative;
+      -webkit-transition: .3s;
+      transition: .3s; }
       /* line 31, source/stylesheets/_stock.scss */
       .stock-body-panel-wrapper {
-        width: 100%; }
-      /* line 34, source/stylesheets/_stock.scss */
+        width: 100%;
+        padding: 20px 12%; }
+      /* line 36, source/stylesheets/_stock.scss */
+      .stock-body-panel .background-blue {
+        background: #90daff; }
+      /* line 40, source/stylesheets/_stock.scss */
+      .stock-body-panel .background-white {
+        background: white;
+        -webkit-transition: .3s;
+        transition: .3s; }
+      /* line 44, source/stylesheets/_stock.scss */
       .stock-body-panel-remove {
         position: absolute;
         right: -60px;
@@ -375,42 +385,42 @@ body {
         justify-content: center;
         color: white;
         font-size: 12px; }
-      /* line 49, source/stylesheets/_stock.scss */
+      /* line 59, source/stylesheets/_stock.scss */
       .stock-body-panel-head {
         display: flex; }
-        /* line 51, source/stylesheets/_stock.scss */
+        /* line 61, source/stylesheets/_stock.scss */
         .stock-body-panel-head .name {
           font-size: 18px; }
-        /* line 54, source/stylesheets/_stock.scss */
+        /* line 64, source/stylesheets/_stock.scss */
         .stock-body-panel-head .time {
           margin-left: auto;
           color: #aaa; }
-      /* line 60, source/stylesheets/_stock.scss */
+      /* line 70, source/stylesheets/_stock.scss */
       .stock-body-panel-body {
         display: flex;
         align-items: center;
         margin-top: 10px; }
-        /* line 64, source/stylesheets/_stock.scss */
+        /* line 74, source/stylesheets/_stock.scss */
         .stock-body-panel-body .num {
           padding: 8px 10px;
           padding-left: 30px;
           border: 1px solid #d6d6d6;
           border-radius: 4px; }
-        /* line 70, source/stylesheets/_stock.scss */
+        /* line 80, source/stylesheets/_stock.scss */
         .stock-body-panel-body .mult {
           margin: 0 10px;
           color: #999;
           font-size: 20px; }
-        /* line 75, source/stylesheets/_stock.scss */
+        /* line 85, source/stylesheets/_stock.scss */
         .stock-body-panel-body .value {
           padding: 8px 10px;
           padding-left: 80px;
           border: 1px solid #d6d6d6;
           border-radius: 4px; }
-          /* line 80, source/stylesheets/_stock.scss */
+          /* line 90, source/stylesheets/_stock.scss */
           .stock-body-panel-body .value::before {
             content: "¥"; }
-  /* line 89, source/stylesheets/_stock.scss */
+  /* line 99, source/stylesheets/_stock.scss */
   .stock-foot {
     padding: 20px 12%;
     border: 1px solid #d6d6d6;
@@ -419,22 +429,22 @@ body {
     margin-top: auto;
     display: flex;
     align-items: center; }
-    /* line 97, source/stylesheets/_stock.scss */
+    /* line 107, source/stylesheets/_stock.scss */
     .stock-foot .sum_num {
       font-size: 18px; }
-      /* line 99, source/stylesheets/_stock.scss */
+      /* line 109, source/stylesheets/_stock.scss */
       .stock-foot .sum_num::after {
         color: #aaa;
         font-size: 12px;
         content: "点"; }
-    /* line 105, source/stylesheets/_stock.scss */
+    /* line 115, source/stylesheets/_stock.scss */
     .stock-foot .sum_value {
       margin-left: auto;
       font-size: 24px; }
-      /* line 108, source/stylesheets/_stock.scss */
+      /* line 118, source/stylesheets/_stock.scss */
       .stock-foot .sum_value::before {
         content: "¥"; }
-      /* line 111, source/stylesheets/_stock.scss */
+      /* line 121, source/stylesheets/_stock.scss */
       .stock-foot .sum_value::after {
         color: #aaa;
         font-size: 12px;
