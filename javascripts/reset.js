@@ -10,3 +10,9 @@ $(".reset_btn").on("click", function() {
   calc_sum()
 
 })
+
+
+document.addEventListener('touchend', function (event) {
+  event.preventDefault();
+  $(event.target).trigger('click');
+}, false);
