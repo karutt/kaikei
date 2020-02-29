@@ -311,9 +311,10 @@ textarea,
 body, html {
   height: 100%;
   background: white;
-  color: #444; }
+  color: #444;
+  font-size: 18px; }
 
-/* line 12, source/stylesheets/_index.scss */
+/* line 13, source/stylesheets/_index.scss */
 body {
   user-select: none;
   -webkit-user-select: none;
@@ -323,15 +324,15 @@ body {
   -webkit-user-drag: none;
   -khtml-user-drag: none; }
 
-/* line 22, source/stylesheets/_index.scss */
+/* line 23, source/stylesheets/_index.scss */
 .wrapper {
   display: flex;
   height: 100%; }
-  /* line 25, source/stylesheets/_index.scss */
+  /* line 26, source/stylesheets/_index.scss */
   .wrapper .stock {
     flex-basis: 33%;
     height: 100%; }
-  /* line 29, source/stylesheets/_index.scss */
+  /* line 30, source/stylesheets/_index.scss */
   .wrapper .tab_wrap {
     flex-basis: 67%;
     height: 100%; }
@@ -494,7 +495,7 @@ body {
       padding: 12px 10px;
       width: 33.3333%;
       border: solid 1px #20AEE4;
-      font-size: 14px; }
+      font-size: 16px; }
     /* line 37, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .active {
       background-color: #20AEE4;
@@ -514,12 +515,41 @@ body {
 /* line 58, source/stylesheets/_tab.scss */
 .panel_area {
   width: 100%;
-  background: #fff; }
-  /* line 61, source/stylesheets/_tab.scss */
+  background: #fff;
+  height: calc(100% - 120px); }
+  /* line 63, source/stylesheets/_tab.scss */
   .panel_area .tab_panel {
     width: 100%;
     display: none; }
-  /* line 65, source/stylesheets/_tab.scss */
+  /* line 68, source/stylesheets/_tab.scss */
+  .panel_area #panel1 {
+    height: 100%; }
+    /* line 70, source/stylesheets/_tab.scss */
+    .panel_area #panel1 .panel-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+    /* line 76, source/stylesheets/_tab.scss */
+    .panel_area #panel1 .payment_btn {
+      margin-top: auto;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 12%; }
+      /* line 83, source/stylesheets/_tab.scss */
+      .panel_area #panel1 .payment_btn .payment-btn {
+        color: white;
+        background: #20AEE4;
+        padding: 15px 80px;
+        font-size: 20px;
+        border-radius: 6px;
+        font-weight: bold;
+        border: solid 1px #136280;
+        -webkit-box-shadow: 0 1px 0 0 #136280;
+                box-shadow: 0 1px 0 0 #136280; }
+  /* line 97, source/stylesheets/_tab.scss */
   .panel_area .show {
     display: block; }
 
@@ -538,4 +568,125 @@ body {
       margin-left: auto; }
       /* line 16, source/stylesheets/_kaikei.scss */
       .kaikei-item .value::before {
-        content: "･･･　¥"; }
+        content: "¥"; }
+
+/* line 1, source/stylesheets/_tenkey.scss */
+.tenkey {
+  height: 100%; }
+  /* line 3, source/stylesheets/_tenkey.scss */
+  .tenkey th, .tenkey td {
+    font-weight: normal;
+    width: 33.333%;
+    height: 20%;
+    text-align: center;
+    border: solid 1px #d6d6d6;
+    font-size: 20px; }
+
+/* line 1, source/stylesheets/_payment.scss */
+.cover {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* line 11, source/stylesheets/_payment.scss */
+.payment {
+  position: absolute;
+  top: 1.5%;
+  left: 15%;
+  width: 70%;
+  height: 97%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  color: #555;
+  font-size: 20px; }
+  /* line 24, source/stylesheets/_payment.scss */
+  .payment-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: 500;
+    border-bottom: solid 1px #d6d6d6;
+    height: 25%;
+    color: #565656; }
+    /* line 33, source/stylesheets/_payment.scss */
+    .payment-head::before {
+      content: "¥"; }
+  /* line 38, source/stylesheets/_payment.scss */
+  .payment-body {
+    height: 62%;
+    display: flex; }
+    /* line 41, source/stylesheets/_payment.scss */
+    .payment-body-cash {
+      width: 50%;
+      background: white; }
+      /* line 44, source/stylesheets/_payment.scss */
+      .payment-body-cash-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 8%;
+        border-bottom: solid 1px #d6d6d6; }
+        /* line 50, source/stylesheets/_payment.scss */
+        .payment-body-cash-wrapper .name {
+          color: #aaa;
+          font-size: 18px; }
+        /* line 54, source/stylesheets/_payment.scss */
+        .payment-body-cash-wrapper .value {
+          margin-left: auto;
+          font-size: 26px; }
+          /* line 57, source/stylesheets/_payment.scss */
+          .payment-body-cash-wrapper .value::before {
+            content: "¥"; }
+    /* line 64, source/stylesheets/_payment.scss */
+    .payment-body .tenkey {
+      width: 50%;
+      background: white; }
+  /* line 69, source/stylesheets/_payment.scss */
+  .payment-foot {
+    height: 13%;
+    display: flex;
+    background: #eeeeee;
+    border-radius: 10px; }
+    /* line 74, source/stylesheets/_payment.scss */
+    .payment-foot-charge {
+      padding: 4%;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; }
+      /* line 80, source/stylesheets/_payment.scss */
+      .payment-foot-charge .name {
+        font-size: 18px; }
+      /* line 83, source/stylesheets/_payment.scss */
+      .payment-foot-charge .value {
+        margin-left: auto;
+        font-size: 26px; }
+        /* line 86, source/stylesheets/_payment.scss */
+        .payment-foot-charge .value::before {
+          content: "¥"; }
+    /* line 91, source/stylesheets/_payment.scss */
+    .payment-foot-finish {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 2%; }
+      /* line 98, source/stylesheets/_payment.scss */
+      .payment-foot-finish .finish-btn {
+        color: white;
+        background: #20AEE4;
+        padding: 10px 0;
+        width: 98%;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 6px;
+        font-weight: bold;
+        border: solid 1px #2f97bf;
+        -webkit-box-shadow: 0 1px 0 0 #2f97bf;
+                box-shadow: 0 1px 0 0 #2f97bf; }

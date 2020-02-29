@@ -6,7 +6,7 @@ tab_event = (down, move, up) => {
 
   $('.stock-body').on(move, ".stock-body-panel", function(e) {
     if(mousedown) {
-      d = mouseX - e.pageX
+      d = (mouseX - e.pageX)
 
       if($(this).hasClass("open")) {
         if(-60<=d && d<=0) {
@@ -38,14 +38,14 @@ tab_event = (down, move, up) => {
     if(mousedown) {
       if($(target).hasClass("open")) {
 
-        $(target).animate({right: '0px'}, 0);
+        $(target).css({right: '0px'});
         $(target).removeClass("open")
 
       } else {
         if (mouseX - e.pageX < 20) {
-          $(target).animate({right: '0px'}, 0);
+          $(target).css({right: '0px'});
         } else {
-          $(target).animate({right: '60px'}, 0);
+          $(target).css({right: '60px'});
           $(target).addClass("open")
         }
       }

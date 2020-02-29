@@ -40,12 +40,13 @@ $(".kaikei-item").on("click", function() {
     num = Number($(id).children(".stock-body-panel-body").children(".num").html())+1
     $(id).children(".stock-body-panel-body").children(".num").html(num)
     $(id).stop().animate({'backgroundColor': '#e6f7ff'}, 250, function() {
-      $(id).animate({'backgroundColor': '#ffffff'}, 250, function() {
-        $(".stock-body-panel-wrappe").css({background: "#ffffff"})
-      })
+      $(id).animate({'backgroundColor': '#ffffff'}, 250)
     });
   } else {
     $(".stock-body").append(stock_template(name, value))
+    $(id).stop().animate({'backgroundColor': '#e6f7ff'}, 0, function() {
+      $(id).animate({'backgroundColor': '#ffffff'}, 500)
+    });
 
   }
   calc_sum()
