@@ -312,9 +312,11 @@ body, html {
   height: 100%;
   background: white;
   color: #444;
-  font-size: 18px; }
+  font-size: 18px;
+  position: fixed;
+  width: 100%; }
 
-/* line 13, source/stylesheets/_index.scss */
+/* line 15, source/stylesheets/_index.scss */
 body {
   user-select: none;
   -webkit-user-select: none;
@@ -324,15 +326,15 @@ body {
   -webkit-user-drag: none;
   -khtml-user-drag: none; }
 
-/* line 23, source/stylesheets/_index.scss */
+/* line 25, source/stylesheets/_index.scss */
 .wrapper {
   display: flex;
   height: 100%; }
-  /* line 26, source/stylesheets/_index.scss */
+  /* line 28, source/stylesheets/_index.scss */
   .wrapper .stock {
     flex-basis: 33%;
     height: 100%; }
-  /* line 30, source/stylesheets/_index.scss */
+  /* line 32, source/stylesheets/_index.scss */
   .wrapper .tab_wrap {
     flex-basis: 67%;
     height: 100%; }
