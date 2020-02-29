@@ -40,7 +40,9 @@ $(".kaikei-item").on("click", function() {
     num = Number($(id).children(".stock-body-panel-body").children(".num").html())+1
     $(id).children(".stock-body-panel-body").children(".num").html(num)
     $(id).stop().animate({'backgroundColor': '#e6f7ff'}, 250, function() {
-      $(id).animate({'backgroundColor': '#ffffff'}, 250)
+      $(id).animate({'backgroundColor': '#ffffff'}, 250, function() {
+        $(".stock-body-panel-wrappe").css({background: "#ffffff"})
+      })
     });
   } else {
     $(".stock-body").append(stock_template(name, value))
