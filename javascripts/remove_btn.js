@@ -51,8 +51,7 @@ tab_event = (down, move, up) => {
       mousedown = false
     }
   })
-
 }
 
-tab_event("mousedown", "mousedown", "mouseup")
+tab_event("mousedown", "mousemove", "mouseup")
 tab_event("touchstart", "touchmove", "touchend")

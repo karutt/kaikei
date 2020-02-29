@@ -485,14 +485,12 @@ body {
 /* line 58, source/stylesheets/_tab.scss */
 .panel_area {
   width: 100%;
-  height: 100%;
   background: #fff; }
-  /* line 62, source/stylesheets/_tab.scss */
+  /* line 61, source/stylesheets/_tab.scss */
   .panel_area .tab_panel {
     width: 100%;
-    height: 100%;
     display: none; }
-  /* line 67, source/stylesheets/_tab.scss */
+  /* line 65, source/stylesheets/_tab.scss */
   .panel_area .show {
     display: block; }
 
