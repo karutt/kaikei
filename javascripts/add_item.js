@@ -21,7 +21,7 @@ stock_template = (name, value)=> {
 }
 
 
-$(".kaikei-item").on("click", function() {
+$(".kaikei").on("click", ".kaikei-item", function() {
   if(!$(".kaikei").hasClass("edit_mode")) {
     name = $(this).children(".name").html()
     value = $(this).children(".value").html()
@@ -36,7 +36,7 @@ $(".kaikei-item").on("click", function() {
       $(".stock-body").append(stock_template(name, value))
       $(id).stop().animate({'backgroundColor': '#e6f7ff'}, 0, function() {
         $(id).animate({'backgroundColor': '#ffffff'}, 500)
-      });  
+      });
     }
     calc_sum()
   }
