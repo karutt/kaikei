@@ -409,7 +409,7 @@ body {
         top: -0px;
         width: 60px;
         height: 100%;
-        background: #f95555;
+        background: #FA6456;
         color: white;
         font-size: 12px; }
       /* line 65, source/stylesheets/_stock.scss */
@@ -599,6 +599,10 @@ body {
     text-align: center;
     border: solid 1px #d6d6d6;
     font-size: 24px; }
+  /* line 11, source/stylesheets/_tenkey.scss */
+  .tenkey .remove {
+    height: 30px;
+    width: auto; }
 
 /* line 1, source/stylesheets/_payment.scss */
 .cover {
@@ -696,6 +700,9 @@ body {
     background: #eeeeee;
     border-radius: 10px; }
     /* line 87, source/stylesheets/_payment.scss */
+    .payment-foot .unpaid {
+      color: #FA6456; }
+    /* line 90, source/stylesheets/_payment.scss */
     .payment-foot-charge {
       display: flex;
       justify-content: flex-end;
@@ -703,17 +710,17 @@ body {
       flex-direction: row;
       padding: 4%;
       width: 50%; }
-      /* line 91, source/stylesheets/_payment.scss */
+      /* line 94, source/stylesheets/_payment.scss */
       .payment-foot-charge .name {
         font-size: 20px; }
-      /* line 94, source/stylesheets/_payment.scss */
+      /* line 97, source/stylesheets/_payment.scss */
       .payment-foot-charge .value {
         margin-left: auto;
         font-size: 30px; }
-        /* line 97, source/stylesheets/_payment.scss */
+        /* line 100, source/stylesheets/_payment.scss */
         .payment-foot-charge .value::before {
           content: "¥"; }
-    /* line 102, source/stylesheets/_payment.scss */
+    /* line 106, source/stylesheets/_payment.scss */
     .payment-foot-finish {
       display: flex;
       justify-content: flex-end;
@@ -721,7 +728,7 @@ body {
       flex-direction: row;
       width: 50%;
       padding-right: 2%; }
-      /* line 106, source/stylesheets/_payment.scss */
+      /* line 110, source/stylesheets/_payment.scss */
       .payment-foot-finish .finish-btn {
         color: white;
         background: #20AEE4;
@@ -734,3 +741,9 @@ body {
         border: solid 1px #2f97bf;
         -webkit-box-shadow: 0 1px 0 0 #2f97bf;
                 box-shadow: 0 1px 0 0 #2f97bf; }
+      /* line 122, source/stylesheets/_payment.scss */
+      .payment-foot-finish .not_finish {
+        background: #D8D8D8;
+        border: solid 1px #d6d6d6;
+        -webkit-box-shadow: 0 1px 0 0 #d6d6d6;
+                box-shadow: 0 1px 0 0 #d6d6d6; }

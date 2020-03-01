@@ -19,18 +19,7 @@ stock_template = (name, value)=> {
   <div class="stock-body-panel-remove">削除</div>
   </div>`
 }
-window.calc_sum = function() {
-  sum_num = 0
-  sum_value = 0
-  $(".stock-body-panel-body").each(function(index, element) {
-    num = Number($(this).children(".num").html())
-    sum_num += num
-    value = num * Number($(this).children(".value").html())
-    sum_value += value
-  })
-  $(".stock-foot > .sum_num").html(sum_num)
-  $(".stock-foot > .sum_value").html(sum_value)
-}
+
 
 $(".kaikei-item").on("click", function() {
   name = $(this).children(".name").html()
