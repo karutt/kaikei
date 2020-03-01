@@ -687,9 +687,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  display: none; }
+  display: none;
+  z-index: 3; }
 
-/* line 11, source/stylesheets/_payment.scss */
+/* line 12, source/stylesheets/_payment.scss */
 .payment {
   position: absolute;
   top: 100%;
@@ -701,19 +702,20 @@ body {
   border: 1px solid #aaa;
   color: #555;
   font-size: 24px;
-  display: none; }
-  /* line 24, source/stylesheets/_payment.scss */
+  display: none;
+  z-index: 3; }
+  /* line 26, source/stylesheets/_payment.scss */
   .payment-head {
     height: 25%;
     position: relative; }
-    /* line 27, source/stylesheets/_payment.scss */
+    /* line 29, source/stylesheets/_payment.scss */
     .payment-head .close-btn {
       position: absolute;
       top: -10px;
       right: -10px;
       width: 40px;
       height: 40px; }
-    /* line 35, source/stylesheets/_payment.scss */
+    /* line 37, source/stylesheets/_payment.scss */
     .payment-head-name {
       display: flex;
       justify-content: center;
@@ -723,7 +725,7 @@ body {
       color: #444;
       font-size: 18px;
       border-bottom: 1px solid #d6d6d6; }
-    /* line 42, source/stylesheets/_payment.scss */
+    /* line 44, source/stylesheets/_payment.scss */
     .payment-head-value {
       display: flex;
       justify-content: center;
@@ -734,18 +736,18 @@ body {
       font-weight: 500;
       border-bottom: solid 1px #d6d6d6;
       color: #565656; }
-      /* line 49, source/stylesheets/_payment.scss */
+      /* line 51, source/stylesheets/_payment.scss */
       .payment-head-value::before {
         content: "¥"; }
-  /* line 53, source/stylesheets/_payment.scss */
+  /* line 55, source/stylesheets/_payment.scss */
   .payment-body {
     height: 62%;
     display: flex; }
-    /* line 56, source/stylesheets/_payment.scss */
+    /* line 58, source/stylesheets/_payment.scss */
     .payment-body-cash {
       width: 50%;
       background: white; }
-      /* line 59, source/stylesheets/_payment.scss */
+      /* line 61, source/stylesheets/_payment.scss */
       .payment-body-cash-wrapper {
         display: flex;
         justify-content: flex-end;
@@ -753,31 +755,31 @@ body {
         flex-direction: row;
         padding: 8%;
         border-bottom: solid 1px #d6d6d6; }
-        /* line 63, source/stylesheets/_payment.scss */
+        /* line 65, source/stylesheets/_payment.scss */
         .payment-body-cash-wrapper .name {
           color: #aaa;
           font-size: 20px; }
-        /* line 67, source/stylesheets/_payment.scss */
+        /* line 69, source/stylesheets/_payment.scss */
         .payment-body-cash-wrapper .value {
           margin-left: auto;
           font-size: 30px; }
-          /* line 70, source/stylesheets/_payment.scss */
+          /* line 72, source/stylesheets/_payment.scss */
           .payment-body-cash-wrapper .value::before {
             content: "¥"; }
-    /* line 77, source/stylesheets/_payment.scss */
+    /* line 79, source/stylesheets/_payment.scss */
     .payment-body .tenkey {
       width: 50%;
       background: white; }
-  /* line 82, source/stylesheets/_payment.scss */
+  /* line 84, source/stylesheets/_payment.scss */
   .payment-foot {
     height: 13%;
     display: flex;
     background: #eeeeee;
     border-radius: 10px; }
-    /* line 87, source/stylesheets/_payment.scss */
+    /* line 89, source/stylesheets/_payment.scss */
     .payment-foot .unpaid {
       color: #FA6456; }
-    /* line 90, source/stylesheets/_payment.scss */
+    /* line 92, source/stylesheets/_payment.scss */
     .payment-foot-charge {
       display: flex;
       justify-content: flex-end;
@@ -785,17 +787,17 @@ body {
       flex-direction: row;
       padding: 4%;
       width: 50%; }
-      /* line 94, source/stylesheets/_payment.scss */
+      /* line 96, source/stylesheets/_payment.scss */
       .payment-foot-charge .name {
         font-size: 20px; }
-      /* line 97, source/stylesheets/_payment.scss */
+      /* line 99, source/stylesheets/_payment.scss */
       .payment-foot-charge .value {
         margin-left: auto;
         font-size: 30px; }
-        /* line 100, source/stylesheets/_payment.scss */
+        /* line 102, source/stylesheets/_payment.scss */
         .payment-foot-charge .value::before {
           content: "¥"; }
-    /* line 106, source/stylesheets/_payment.scss */
+    /* line 108, source/stylesheets/_payment.scss */
     .payment-foot-finish {
       display: flex;
       justify-content: flex-end;
@@ -803,7 +805,7 @@ body {
       flex-direction: row;
       width: 50%;
       padding-right: 2%; }
-      /* line 110, source/stylesheets/_payment.scss */
+      /* line 112, source/stylesheets/_payment.scss */
       .payment-foot-finish .finish-btn {
         color: white;
         padding: 10px 0;
@@ -816,7 +818,7 @@ body {
         border: solid 1px #d6d6d6;
         -webkit-box-shadow: 0 1px 0 0 #d6d6d6;
                 box-shadow: 0 1px 0 0 #d6d6d6; }
-      /* line 122, source/stylesheets/_payment.scss */
+      /* line 124, source/stylesheets/_payment.scss */
       .payment-foot-finish .finish {
         background: #20AEE4;
         border: solid 1px #2f97bf;
