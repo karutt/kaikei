@@ -18,5 +18,5 @@ window.addcomma = function(str) {
 }
 
 window.removecomma = function(str) {
-  return Number(str.replace( /,/g , "" ))
+  return Number(String(str).replace( /,/g , "" ))
 }

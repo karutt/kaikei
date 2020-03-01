@@ -731,19 +731,19 @@ body {
       /* line 110, source/stylesheets/_payment.scss */
       .payment-foot-finish .finish-btn {
         color: white;
-        background: #20AEE4;
         padding: 10px 0;
         width: 98%;
         text-align: center;
         font-size: 24px;
         border-radius: 6px;
         font-weight: bold;
-        border: solid 1px #2f97bf;
-        -webkit-box-shadow: 0 1px 0 0 #2f97bf;
-                box-shadow: 0 1px 0 0 #2f97bf; }
-      /* line 122, source/stylesheets/_payment.scss */
-      .payment-foot-finish .not_finish {
         background: #D8D8D8;
         border: solid 1px #d6d6d6;
         -webkit-box-shadow: 0 1px 0 0 #d6d6d6;
                 box-shadow: 0 1px 0 0 #d6d6d6; }
+      /* line 122, source/stylesheets/_payment.scss */
+      .payment-foot-finish .finish {
+        background: #20AEE4;
+        border: solid 1px #2f97bf;
+        -webkit-box-shadow: 0 1px 0 0 #2f97bf;
+                box-shadow: 0 1px 0 0 #2f97bf; }
