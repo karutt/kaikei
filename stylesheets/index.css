@@ -307,7 +307,7 @@ textarea,
 [tabindex] {
   -ms-touch-action: manipulation;
   touch-action: manipulation; }
-/* line 14, source/stylesheets/_index.scss */
+/* line 15, source/stylesheets/_index.scss */
 body, html {
   height: 100%;
   background: white;
@@ -316,7 +316,7 @@ body, html {
   position: fixed;
   width: 100%; }
 
-/* line 23, source/stylesheets/_index.scss */
+/* line 24, source/stylesheets/_index.scss */
 body {
   user-select: none;
   -webkit-user-select: none;
@@ -326,15 +326,15 @@ body {
   -webkit-user-drag: none;
   -khtml-user-drag: none; }
 
-/* line 33, source/stylesheets/_index.scss */
+/* line 34, source/stylesheets/_index.scss */
 .wrapper {
   display: flex;
   height: 100%; }
-  /* line 36, source/stylesheets/_index.scss */
+  /* line 37, source/stylesheets/_index.scss */
   .wrapper .stock {
     flex-basis: 33%;
     height: 100%; }
-  /* line 40, source/stylesheets/_index.scss */
+  /* line 41, source/stylesheets/_index.scss */
   .wrapper .tab_wrap {
     flex-basis: 67%;
     height: 100%; }
@@ -539,15 +539,44 @@ body {
     display: none; }
   /* line 59, source/stylesheets/_tab.scss */
   .panel_area #panel1 {
+    display: flex;
+    justify-content: normal;
+    align-items: normal;
+    flex-direction: row;
     height: 100%; }
-    /* line 61, source/stylesheets/_tab.scss */
+    /* line 63, source/stylesheets/_tab.scss */
+    .panel_area #panel1 .edit_area {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: row;
+      width: 35%;
+      border-right: 1px solid #d6d6d6; }
+      /* line 67, source/stylesheets/_tab.scss */
+      .panel_area #panel1 .edit_area-body {
+        display: flex;
+        justify-content: normal;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 60px;
+        padding: 0 40px;
+        background: #edfcff;
+        font-size: 16px;
+        color: #767676; }
+        /* line 76, source/stylesheets/_tab.scss */
+        .panel_area #panel1 .edit_area-body .edit_btn {
+          width: 20px;
+          margin-right: 10px; }
+    /* line 83, source/stylesheets/_tab.scss */
     .panel_area #panel1 .panel-wrapper {
       height: 100%;
+      width: calc(100% - 35%);
       display: flex;
       justify-content: flex-end;
       align-items: strech;
       flex-direction: column; }
-    /* line 65, source/stylesheets/_tab.scss */
+    /* line 88, source/stylesheets/_tab.scss */
     .panel_area #panel1 .payment_btn {
       margin-top: auto;
       height: 120px;
@@ -556,7 +585,7 @@ body {
       align-items: center;
       flex-direction: row;
       padding-right: 12%; }
-      /* line 70, source/stylesheets/_tab.scss */
+      /* line 93, source/stylesheets/_tab.scss */
       .panel_area #panel1 .payment_btn .payment-btn {
         color: white;
         background: #20AEE4;
@@ -567,7 +596,7 @@ body {
         border: solid 1px #2f97bf;
         -webkit-box-shadow: 0 1px 0 0 #2f97bf;
                 box-shadow: 0 1px 0 0 #2f97bf; }
-  /* line 84, source/stylesheets/_tab.scss */
+  /* line 107, source/stylesheets/_tab.scss */
   .panel_area .show {
     display: block; }
 
@@ -575,18 +604,34 @@ body {
 .kaikei {
   text-decoration: none;
   list-style: none; }
-  /* line 6, source/stylesheets/_kaikei.scss */
+  /* line 5, source/stylesheets/_kaikei.scss */
   .kaikei-item {
     border-bottom: 1px solid #d6d6d6;
     display: flex;
     padding: 20px 12%;
     color: #555; }
-    /* line 14, source/stylesheets/_kaikei.scss */
+    /* line 13, source/stylesheets/_kaikei.scss */
     .kaikei-item .value {
-      margin-left: auto; }
+      margin-left: auto;
+      display: flex; }
       /* line 16, source/stylesheets/_kaikei.scss */
       .kaikei-item .value::before {
         content: "¥"; }
+  /* line 22, source/stylesheets/_kaikei.scss */
+  .kaikei .edit_css .name, .kaikei .edit_css .value {
+    border-bottom: 1px solid #d6d6d6;
+    width: 45%; }
+  /* line 28, source/stylesheets/_kaikei.scss */
+  .kaikei .kaikei-placeholder {
+    -webkit-box-shadow: 0 0 4px 4px #edfcff;
+            box-shadow: 0 0 4px 4px #edfcff;
+    padding: 20px 12%;
+    background: #edfcff; }
+
+/* line 36, source/stylesheets/_kaikei.scss */
+.edit_input {
+  -webkit-box-shadow: 0 0 4px 4px #edfcff;
+          box-shadow: 0 0 4px 4px #edfcff; }
 
 /* line 1, source/stylesheets/_tenkey.scss */
 .tenkey {

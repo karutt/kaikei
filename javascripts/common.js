@@ -20,3 +20,8 @@ window.addcomma = function(str) {
 window.removecomma = function(str) {
   return Number(String(str).replace( /,/g , "" ))
 }
+
+document.addEventListener('touchend', function (event) {
+  event.preventDefault();
+  $(event.target).trigger('click');
+}, false);

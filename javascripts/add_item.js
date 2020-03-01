@@ -22,21 +22,22 @@ stock_template = (name, value)=> {
 
 
 $(".kaikei-item").on("click", function() {
-  name = $(this).children(".name").html()
-  value = $(this).children(".value").html()
-  id = '#'+name
-  if($(id).length) {
-    num = Number($(id).children(".stock-body-panel-body").children(".num").html())+1
-    $(id).children(".stock-body-panel-body").children(".num").html(num)
-    $(id).stop().animate({'backgroundColor': '#e6f7ff'}, 250, function() {
-      $(id).animate({'backgroundColor': '#ffffff'}, 250)
-    });
-  } else {
-    $(".stock-body").append(stock_template(name, value))
-    $(id).stop().animate({'backgroundColor': '#e6f7ff'}, 0, function() {
-      $(id).animate({'backgroundColor': '#ffffff'}, 500)
-    });
-
+  if(!$(".kaikei").hasClass("edit_mode")) {
+    name = $(this).children(".name").html()
+    value = $(this).children(".value").html()
+    id = '#'+name
+    if($(id).length) {
+      num = Number($(id).children(".stock-body-panel-body").children(".num").html())+1
+      $(id).children(".stock-body-panel-body").children(".num").html(num)
+      $(id).stop().animate({'backgroundColor': '#e6f7ff'}, 250, function() {
+        $(id).animate({'backgroundColor': '#ffffff'}, 250)
+      });
+    } else {
+      $(".stock-body").append(stock_template(name, value))
+      $(id).stop().animate({'backgroundColor': '#e6f7ff'}, 0, function() {
+        $(id).animate({'backgroundColor': '#ffffff'}, 500)
+      });  
+    }
+    calc_sum()
   }
-  calc_sum()
 })

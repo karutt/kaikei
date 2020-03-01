@@ -9,8 +9,6 @@ close_modal = function() {
 $(".payment-foot-finish").on("click", ".finish", close_modal)
 $(".close-btn").on("click", close_modal)
 
-
-
 // open modal
 $(".payment-btn").on("click", function() {
   sum_value = removecomma($(".stock-foot > .sum_value").html())
@@ -30,6 +28,7 @@ $(".tenkey-th-sp1, .tenkey-th-sp2").on("click", function() {
 // remove key
 $(".tenkey-th-remove").on("click", function() {
   new_value = addcomma($(".payment-body-cash-wrapper .value").html().slice(0, -1))
+  new_value = new_value.length == 0 ? 0 : new_value
   $(".payment-body-cash-wrapper .value").html(new_value)
   set_charge($(".payment-head-value").html())
 })
