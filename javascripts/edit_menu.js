@@ -53,7 +53,7 @@ edit_text = function(parent, child) {
 
   $(parent).on('keypress', child, "input.edit_input:focus", function(e){
     if($(".kaikei").hasClass("edit_mode")) {
-      if ( e.which == 13 ) {$(this)[0].blur()}
+      if ( e.which == 13 ) {$(this).children("input")[0].blur()}
     }
   });
 
