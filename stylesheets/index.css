@@ -613,7 +613,7 @@ body {
 /* line 11, source/stylesheets/_payment.scss */
 .payment {
   position: absolute;
-  top: 1.5%;
+  top: 100%;
   left: 15%;
   width: 70%;
   height: 97%;
