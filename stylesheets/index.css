@@ -307,7 +307,7 @@ textarea,
 [tabindex] {
   -ms-touch-action: manipulation;
   touch-action: manipulation; }
-/* line 6, source/stylesheets/_index.scss */
+/* line 14, source/stylesheets/_index.scss */
 body, html {
   height: 100%;
   background: white;
@@ -316,7 +316,7 @@ body, html {
   position: fixed;
   width: 100%; }
 
-/* line 15, source/stylesheets/_index.scss */
+/* line 23, source/stylesheets/_index.scss */
 body {
   user-select: none;
   -webkit-user-select: none;
@@ -326,15 +326,15 @@ body {
   -webkit-user-drag: none;
   -khtml-user-drag: none; }
 
-/* line 25, source/stylesheets/_index.scss */
+/* line 33, source/stylesheets/_index.scss */
 .wrapper {
   display: flex;
   height: 100%; }
-  /* line 28, source/stylesheets/_index.scss */
+  /* line 36, source/stylesheets/_index.scss */
   .wrapper .stock {
     flex-basis: 33%;
     height: 100%; }
-  /* line 32, source/stylesheets/_index.scss */
+  /* line 40, source/stylesheets/_index.scss */
   .wrapper .tab_wrap {
     flex-basis: 67%;
     height: 100%; }
@@ -349,124 +349,134 @@ body {
   .stock-head {
     height: 60px;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
     padding: 20px 12%; }
-    /* line 13, source/stylesheets/_stock.scss */
+    /* line 11, source/stylesheets/_stock.scss */
     .stock-head .reset_btn {
       display: flex;
+      justify-content: normal;
       align-items: center;
+      flex-direction: row;
       color: #20AEE4;
       padding: 5px 20px;
       font-size: 14px; }
-      /* line 21, source/stylesheets/_stock.scss */
+      /* line 16, source/stylesheets/_stock.scss */
       .stock-head .reset_btn img {
         width: 20px;
         height: 20px;
         margin-left: 2px; }
-  /* line 28, source/stylesheets/_stock.scss */
+  /* line 24, source/stylesheets/_stock.scss */
   .stock-wrapper {
     height: calc(100% - 140px);
     overflow: scroll; }
-  /* line 32, source/stylesheets/_stock.scss */
+  /* line 29, source/stylesheets/_stock.scss */
   .stock-body {
     border-top: 1px solid #d6d6d6;
     border-right: none;
     overflow: hidden; }
-    /* line 41, source/stylesheets/_stock.scss */
+    /* line 34, source/stylesheets/_stock.scss */
     .stock-body-panel {
       display: flex;
+      justify-content: normal;
+      align-items: normal;
       flex-direction: row;
       position: relative;
       border-bottom: 1px solid #d6d6d6;
       -webkit-transition: .3s;
       transition: .3s; }
-      /* line 49, source/stylesheets/_stock.scss */
+      /* line 39, source/stylesheets/_stock.scss */
       .stock-body-panel-wrapper {
         width: 100%;
         padding: 20px 12%; }
-      /* line 54, source/stylesheets/_stock.scss */
+      /* line 44, source/stylesheets/_stock.scss */
       .stock-body-panel .background-blue {
         background: #90daff; }
-      /* line 58, source/stylesheets/_stock.scss */
+      /* line 48, source/stylesheets/_stock.scss */
       .stock-body-panel .background-white {
         background: white;
         -webkit-transition: .3s;
         transition: .3s; }
-      /* line 62, source/stylesheets/_stock.scss */
+      /* line 52, source/stylesheets/_stock.scss */
       .stock-body-panel-remove {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
         position: absolute;
         right: -60px;
         top: -0px;
         width: 60px;
         height: 100%;
         background: #f95555;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         color: white;
         font-size: 12px; }
-      /* line 77, source/stylesheets/_stock.scss */
+      /* line 65, source/stylesheets/_stock.scss */
       .stock-body-panel-head {
         display: flex; }
-        /* line 79, source/stylesheets/_stock.scss */
+        /* line 67, source/stylesheets/_stock.scss */
         .stock-body-panel-head .name {
           font-size: 18px; }
-        /* line 82, source/stylesheets/_stock.scss */
+        /* line 70, source/stylesheets/_stock.scss */
         .stock-body-panel-head .time {
           margin-left: auto;
           color: #999;
           font-size: 14px; }
-      /* line 89, source/stylesheets/_stock.scss */
+      /* line 77, source/stylesheets/_stock.scss */
       .stock-body-panel-body {
         display: flex;
+        justify-content: normal;
         align-items: center;
+        flex-direction: row;
         margin-top: 10px; }
-        /* line 93, source/stylesheets/_stock.scss */
+        /* line 80, source/stylesheets/_stock.scss */
         .stock-body-panel-body .num {
           padding: 8px 10px;
           padding-left: 30px;
           border: 1px solid #d6d6d6;
           border-radius: 4px; }
-        /* line 99, source/stylesheets/_stock.scss */
+        /* line 86, source/stylesheets/_stock.scss */
         .stock-body-panel-body .mult {
           margin: 0 10px;
           color: #999;
           font-size: 20px; }
-        /* line 104, source/stylesheets/_stock.scss */
+        /* line 91, source/stylesheets/_stock.scss */
         .stock-body-panel-body .value {
           padding: 8px 10px;
           padding-left: 80px;
           border: 1px solid #d6d6d6;
           border-radius: 4px; }
-          /* line 109, source/stylesheets/_stock.scss */
+          /* line 96, source/stylesheets/_stock.scss */
           .stock-body-panel-body .value::before {
             content: "¥"; }
-  /* line 118, source/stylesheets/_stock.scss */
+  /* line 105, source/stylesheets/_stock.scss */
   .stock-foot {
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    flex-direction: row;
     padding: 20px 12%;
     border: 1px solid #d6d6d6;
     border-right: none;
     height: 80px;
-    margin-top: auto;
-    display: flex;
-    align-items: center; }
-    /* line 126, source/stylesheets/_stock.scss */
+    margin-top: auto; }
+    /* line 112, source/stylesheets/_stock.scss */
     .stock-foot .sum_num {
       font-size: 18px; }
-      /* line 128, source/stylesheets/_stock.scss */
+      /* line 114, source/stylesheets/_stock.scss */
       .stock-foot .sum_num::after {
         color: #aaa;
         font-size: 12px;
         content: "点"; }
-    /* line 134, source/stylesheets/_stock.scss */
+    /* line 120, source/stylesheets/_stock.scss */
     .stock-foot .sum_value {
       margin-left: auto;
       font-size: 24px; }
-      /* line 137, source/stylesheets/_stock.scss */
+      /* line 123, source/stylesheets/_stock.scss */
       .stock-foot .sum_value::before {
         content: "¥"; }
-      /* line 140, source/stylesheets/_stock.scss */
+      /* line 126, source/stylesheets/_stock.scss */
       .stock-foot .sum_value::after {
         color: #aaa;
         font-size: 12px;
@@ -478,69 +488,75 @@ body {
   height: 100%;
   margin: 0; }
 
-/* line 13, source/stylesheets/_tab.scss */
+/* line 9, source/stylesheets/_tab.scss */
 .tab_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 100%;
   height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-bottom: solid 1px #d6d6d6; }
-  /* line 22, source/stylesheets/_tab.scss */
+  /* line 15, source/stylesheets/_tab.scss */
   .tab_area .tab_area_wrapper {
     display: flex;
-    width: 80%;
-    text-align: center; }
-    /* line 27, source/stylesheets/_tab.scss */
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    width: 80%; }
+    /* line 20, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .label {
       color: #20AEE4;
       padding: 12px 10px;
       width: 33.3333%;
       border: solid 1px #20AEE4;
       font-size: 16px; }
-    /* line 37, source/stylesheets/_tab.scss */
+    /* line 28, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .active {
       background-color: #20AEE4;
       color: white; }
-    /* line 42, source/stylesheets/_tab.scss */
+    /* line 33, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .tab1_label {
       border-radius: 30px 0 0 30px;
       border-right: none !important; }
-    /* line 46, source/stylesheets/_tab.scss */
+    /* line 37, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .tab3_label {
       border-radius: 0 30px 30px 0;
       border-left: none !important; }
-    /* line 50, source/stylesheets/_tab.scss */
+    /* line 41, source/stylesheets/_tab.scss */
     .tab_area .tab_area_wrapper .tab_area label:hover {
       opacity: 0.5; }
 
-/* line 58, source/stylesheets/_tab.scss */
+/* line 49, source/stylesheets/_tab.scss */
 .panel_area {
   width: 100%;
   background: #fff;
   height: calc(100% - 120px); }
-  /* line 63, source/stylesheets/_tab.scss */
+  /* line 54, source/stylesheets/_tab.scss */
   .panel_area .tab_panel {
     width: 100%;
     display: none; }
-  /* line 68, source/stylesheets/_tab.scss */
+  /* line 59, source/stylesheets/_tab.scss */
   .panel_area #panel1 {
     height: 100%; }
-    /* line 70, source/stylesheets/_tab.scss */
+    /* line 61, source/stylesheets/_tab.scss */
     .panel_area #panel1 .panel-wrapper {
       height: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end; }
-    /* line 76, source/stylesheets/_tab.scss */
+      justify-content: flex-end;
+      align-items: strech;
+      flex-direction: column; }
+    /* line 65, source/stylesheets/_tab.scss */
     .panel_area #panel1 .payment_btn {
       margin-top: auto;
       height: 120px;
       display: flex;
-      align-items: center;
       justify-content: flex-end;
+      align-items: center;
+      flex-direction: row;
       padding-right: 12%; }
-      /* line 83, source/stylesheets/_tab.scss */
+      /* line 70, source/stylesheets/_tab.scss */
       .panel_area #panel1 .payment_btn .payment-btn {
         color: white;
         background: #20AEE4;
@@ -548,10 +564,10 @@ body {
         font-size: 20px;
         border-radius: 6px;
         font-weight: bold;
-        border: solid 1px #136280;
-        -webkit-box-shadow: 0 1px 0 0 #136280;
-                box-shadow: 0 1px 0 0 #136280; }
-  /* line 97, source/stylesheets/_tab.scss */
+        border: solid 1px #2f97bf;
+        -webkit-box-shadow: 0 1px 0 0 #2f97bf;
+                box-shadow: 0 1px 0 0 #2f97bf; }
+  /* line 84, source/stylesheets/_tab.scss */
   .panel_area .show {
     display: block; }
 
@@ -588,13 +604,12 @@ body {
 .cover {
   width: 100%;
   height: 100%;
-  background: #000;
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0; }
 
-/* line 11, source/stylesheets/_payment.scss */
+/* line 10, source/stylesheets/_payment.scss */
 .payment {
   position: absolute;
   top: 1.5%;
@@ -606,80 +621,105 @@ body {
   border: 1px solid #aaa;
   color: #555;
   font-size: 20px; }
-  /* line 24, source/stylesheets/_payment.scss */
+  /* line 22, source/stylesheets/_payment.scss */
   .payment-head {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 80px;
-    font-weight: 500;
-    border-bottom: solid 1px #d6d6d6;
     height: 25%;
-    color: #565656; }
+    position: relative; }
+    /* line 25, source/stylesheets/_payment.scss */
+    .payment-head .close-btn {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 40px;
+      height: 40px; }
     /* line 33, source/stylesheets/_payment.scss */
-    .payment-head::before {
-      content: "¥"; }
-  /* line 38, source/stylesheets/_payment.scss */
+    .payment-head-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      height: 20%;
+      color: #444;
+      font-size: 14px;
+      border-bottom: 1px solid #d6d6d6; }
+    /* line 40, source/stylesheets/_payment.scss */
+    .payment-head-value {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      height: 80%;
+      font-size: 80px;
+      font-weight: 500;
+      border-bottom: solid 1px #d6d6d6;
+      color: #565656; }
+      /* line 47, source/stylesheets/_payment.scss */
+      .payment-head-value::before {
+        content: "¥"; }
+  /* line 51, source/stylesheets/_payment.scss */
   .payment-body {
     height: 62%;
     display: flex; }
-    /* line 41, source/stylesheets/_payment.scss */
+    /* line 54, source/stylesheets/_payment.scss */
     .payment-body-cash {
       width: 50%;
       background: white; }
-      /* line 44, source/stylesheets/_payment.scss */
+      /* line 57, source/stylesheets/_payment.scss */
       .payment-body-cash-wrapper {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        flex-direction: row;
         padding: 8%;
         border-bottom: solid 1px #d6d6d6; }
-        /* line 50, source/stylesheets/_payment.scss */
+        /* line 61, source/stylesheets/_payment.scss */
         .payment-body-cash-wrapper .name {
           color: #aaa;
-          font-size: 18px; }
-        /* line 54, source/stylesheets/_payment.scss */
+          font-size: 16px; }
+        /* line 65, source/stylesheets/_payment.scss */
         .payment-body-cash-wrapper .value {
           margin-left: auto;
           font-size: 26px; }
-          /* line 57, source/stylesheets/_payment.scss */
+          /* line 68, source/stylesheets/_payment.scss */
           .payment-body-cash-wrapper .value::before {
             content: "¥"; }
-    /* line 64, source/stylesheets/_payment.scss */
+    /* line 75, source/stylesheets/_payment.scss */
     .payment-body .tenkey {
       width: 50%;
       background: white; }
-  /* line 69, source/stylesheets/_payment.scss */
+  /* line 80, source/stylesheets/_payment.scss */
   .payment-foot {
     height: 13%;
     display: flex;
     background: #eeeeee;
     border-radius: 10px; }
-    /* line 74, source/stylesheets/_payment.scss */
+    /* line 85, source/stylesheets/_payment.scss */
     .payment-foot-charge {
-      padding: 4%;
-      width: 50%;
       display: flex;
+      justify-content: flex-end;
       align-items: center;
-      justify-content: flex-end; }
-      /* line 80, source/stylesheets/_payment.scss */
+      flex-direction: row;
+      padding: 4%;
+      width: 50%; }
+      /* line 89, source/stylesheets/_payment.scss */
       .payment-foot-charge .name {
-        font-size: 18px; }
-      /* line 83, source/stylesheets/_payment.scss */
+        font-size: 16px; }
+      /* line 92, source/stylesheets/_payment.scss */
       .payment-foot-charge .value {
         margin-left: auto;
         font-size: 26px; }
-        /* line 86, source/stylesheets/_payment.scss */
+        /* line 95, source/stylesheets/_payment.scss */
         .payment-foot-charge .value::before {
           content: "¥"; }
-    /* line 91, source/stylesheets/_payment.scss */
+    /* line 100, source/stylesheets/_payment.scss */
     .payment-foot-finish {
-      width: 50%;
       display: flex;
-      align-items: center;
       justify-content: flex-end;
+      align-items: center;
+      flex-direction: row;
+      width: 50%;
       padding-right: 2%; }
-      /* line 98, source/stylesheets/_payment.scss */
+      /* line 104, source/stylesheets/_payment.scss */
       .payment-foot-finish .finish-btn {
         color: white;
         background: #20AEE4;

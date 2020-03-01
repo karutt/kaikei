@@ -94,18 +94,24 @@
 </div>
 
 </div>
-<!-- <div class="cover"></div>
-<div class="payment">
+<div class="cover">
+  </div>
+  <div class="payment">
 
-  <div class="payment-head">300</div>
-  <div class="payment-body">
-    <div class="payment-body-cash">
-      <div class="payment-body-cash-wrapper">
-        <div class="name">現金</div>
-        <div class="value">0</div>
-      </div>
+    <div class="payment-head">
+      <img src="/kaikei/images/close.svg" class="close-btn" alt="Close" />
+      <div class="payment-head-name">お支払い</div>
+      <div class="payment-head-value">300</div>
     </div>
-    
+
+    <div class="payment-body">
+      <div class="payment-body-cash">
+        <div class="payment-body-cash-wrapper">
+          <div class="name">現金</div>
+          <div class="value">0</div>
+        </div>
+      </div>
+      
 <table class="tenkey">
   <tr>
     <th>0</th>
@@ -134,30 +140,37 @@
   </tr>
 </table>
 
-  </div>
-
-  <div class="payment-foot">
-    <div class="payment-foot-charge">
-      <div class="name">未精算</div>
-      <div class="value">0</div>
     </div>
-    <div class="payment-foot-finish">
-      <div class="finish-btn">会計する</div>
+
+    <div class="payment-foot">
+      <div class="payment-foot-charge">
+        <div class="name">未精算</div>
+        <div class="value">0</div>
+      </div>
+      <div class="payment-foot-finish">
+        <div class="finish-btn">会計する</div>
+      </div>
     </div>
+
+
   </div>
-
-
-</div> -->
 
 
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+  <script
+			  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+			  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+			  crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.js"></script>
+
   <script src="/kaikei/javascripts/add_item.js"></script>
   <script src="/kaikei/javascripts/remove_btn.js"></script>
   <script src="/kaikei/javascripts/tab.js"></script>
   <script src="/kaikei/javascripts/reset.js"></script>
+  <script src="/kaikei/javascripts/payment.js"></script>
 </body>
 </html>
