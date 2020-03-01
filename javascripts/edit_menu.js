@@ -38,9 +38,9 @@ $(".edit_area-body").on("click", function() {
 })
 
 // テキストの編集
-edit_text = function(selector) {
+edit_text = function(parent, child) {
 
-  $(selector).click(function(){
+  $(parent).on("click", child, function(){
     if($(".kaikei").hasClass("edit_mode")) {
       if(!$(this).hasClass('on')){
         $(this).addClass('on');
@@ -51,19 +51,20 @@ edit_text = function(selector) {
     }
   });
 
-  $(selector).on('keypress', "input.edit_input:focus", function(e){
+  $(parent).on('keypress', child, "input.edit_input:focus", function(e){
     if($(".kaikei").hasClass("edit_mode")) {
       if ( e.which == 13 ) {$(this)[0].blur()}
     }
   });
 
-  $(selector).on('blur', "input.edit_input", function(){
+  $(parent).on('blur', child, "input.edit_input", function(){
     if($(".kaikei").hasClass("edit_mode")) {
-      text = $(this).val()
-      $(this).parent().removeClass("on")
-      $(this).parent().html(text)
+      text = $(this).children("input").val()
+      console.log(text)
+      $(this).removeClass("on")
+      $(this).html(text)
     }
   });
 
 }
-edit_text(".kaikei-item .name, .kaikei-item .value")
+edit_text(".kaikei", ".kaikei-item .name, .kaikei-item .value")

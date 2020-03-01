@@ -596,12 +596,14 @@ body {
     .panel_area #panel1 .payment_btn {
       margin-top: auto;
       height: 100px;
+      background: #fff;
+      z-index: 2;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       flex-direction: row;
       padding-right: 12%; }
-      /* line 110, source/stylesheets/_tab.scss */
+      /* line 112, source/stylesheets/_tab.scss */
       .panel_area #panel1 .payment_btn .payment-btn {
         color: white;
         background: #20AEE4;
@@ -612,7 +614,7 @@ body {
         border: solid 1px #2f97bf;
         -webkit-box-shadow: 0 1px 0 0 #2f97bf;
                 box-shadow: 0 1px 0 0 #2f97bf; }
-  /* line 124, source/stylesheets/_tab.scss */
+  /* line 126, source/stylesheets/_tab.scss */
   .panel_area .show {
     display: block; }
 
@@ -621,8 +623,9 @@ body {
   text-decoration: none;
   list-style: none;
   position: relative;
-  height: calc(100% - 100px); }
-  /* line 7, source/stylesheets/_kaikei.scss */
+  height: calc(100% - 100px);
+  overflow: scroll; }
+  /* line 8, source/stylesheets/_kaikei.scss */
   .kaikei-item {
     border-bottom: 1px solid #d6d6d6;
     display: flex;
@@ -632,29 +635,29 @@ body {
     background: #fff;
     padding: 20px 12%;
     color: #555; }
-    /* line 16, source/stylesheets/_kaikei.scss */
+    /* line 17, source/stylesheets/_kaikei.scss */
     .kaikei-item .value {
       margin-left: auto;
       display: flex; }
-      /* line 19, source/stylesheets/_kaikei.scss */
+      /* line 20, source/stylesheets/_kaikei.scss */
       .kaikei-item .value::before {
         content: "¥"; }
-    /* line 24, source/stylesheets/_kaikei.scss */
+    /* line 25, source/stylesheets/_kaikei.scss */
     .kaikei-item .trash {
       height: 20px;
       margin-left: 20px;
       display: none; }
-  /* line 31, source/stylesheets/_kaikei.scss */
+  /* line 32, source/stylesheets/_kaikei.scss */
   .kaikei .edit_css .name, .kaikei .edit_css .value {
     border-bottom: 1px solid #d6d6d6; }
-  /* line 39, source/stylesheets/_kaikei.scss */
+  /* line 40, source/stylesheets/_kaikei.scss */
   .kaikei .kaikei-placeholder {
     -webkit-box-shadow: 0 0 4px 4px #edfcff;
             box-shadow: 0 0 4px 4px #edfcff;
     padding: 20px 12%;
     background: #edfcff; }
 
-/* line 47, source/stylesheets/_kaikei.scss */
+/* line 48, source/stylesheets/_kaikei.scss */
 .edit_input {
   -webkit-box-shadow: 0 0 4px 4px #edfcff;
           box-shadow: 0 0 4px 4px #edfcff;
