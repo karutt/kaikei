@@ -316,7 +316,7 @@ body, html {
   position: fixed;
   width: 100%; }
 
-/* line 24, source/stylesheets/_index.scss */
+/* line 23, source/stylesheets/_index.scss */
 body {
   user-select: none;
   -webkit-user-select: none;
@@ -326,15 +326,15 @@ body {
   -webkit-user-drag: none;
   -khtml-user-drag: none; }
 
-/* line 34, source/stylesheets/_index.scss */
+/* line 33, source/stylesheets/_index.scss */
 .wrapper {
   display: flex;
   height: 100%; }
-  /* line 37, source/stylesheets/_index.scss */
+  /* line 36, source/stylesheets/_index.scss */
   .wrapper .stock {
     flex-basis: 33%;
     height: 100%; }
-  /* line 41, source/stylesheets/_index.scss */
+  /* line 40, source/stylesheets/_index.scss */
   .wrapper .tab_wrap {
     flex-basis: 67%;
     height: 100%; }
@@ -547,28 +547,44 @@ body {
     /* line 63, source/stylesheets/_tab.scss */
     .panel_area #panel1 .edit_area {
       display: flex;
-      justify-content: center;
+      justify-content: normal;
       align-items: flex-start;
-      flex-direction: row;
+      flex-direction: column;
       width: 35%;
       border-right: 1px solid #d6d6d6; }
       /* line 67, source/stylesheets/_tab.scss */
-      .panel_area #panel1 .edit_area-body {
+      .panel_area #panel1 .edit_area-body, .panel_area #panel1 .edit_area-add_btn {
         display: flex;
         justify-content: normal;
         align-items: center;
         flex-direction: row;
         width: 100%;
-        height: 60px;
-        padding: 0 40px;
-        background: #edfcff;
-        font-size: 16px;
+        height: 70px;
+        padding-left: 40px;
+        background: #fff;
+        border-left-color: #20AEE4;
+        border-bottom: 1px solid #d6d6d6;
+        font-size: 18px;
         color: #767676; }
-        /* line 76, source/stylesheets/_tab.scss */
-        .panel_area #panel1 .edit_area-body .edit_btn {
+        /* line 77, source/stylesheets/_tab.scss */
+        .panel_area #panel1 .edit_area-body .edit_btn, .panel_area #panel1 .edit_area-add_btn .edit_btn {
           width: 20px;
           margin-right: 10px; }
-    /* line 83, source/stylesheets/_tab.scss */
+        /* line 81, source/stylesheets/_tab.scss */
+        .panel_area #panel1 .edit_area-body .add_btn, .panel_area #panel1 .edit_area-add_btn .add_btn {
+          width: 20px;
+          margin-right: 10px;
+          margin-left: 10px; }
+        /* line 86, source/stylesheets/_tab.scss */
+        .panel_area #panel1 .edit_area-body .connecter, .panel_area #panel1 .edit_area-add_btn .connecter {
+          height: 100%;
+          margin-right: -10px; }
+      /* line 92, source/stylesheets/_tab.scss */
+      .panel_area #panel1 .edit_area-add_btn {
+        font-size: 16px;
+        border-bottom: none;
+        display: none; }
+    /* line 100, source/stylesheets/_tab.scss */
     .panel_area #panel1 .panel-wrapper {
       height: 100%;
       width: calc(100% - 35%);
@@ -576,16 +592,16 @@ body {
       justify-content: flex-end;
       align-items: strech;
       flex-direction: column; }
-    /* line 88, source/stylesheets/_tab.scss */
+    /* line 105, source/stylesheets/_tab.scss */
     .panel_area #panel1 .payment_btn {
       margin-top: auto;
-      height: 120px;
+      height: 100px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       flex-direction: row;
       padding-right: 12%; }
-      /* line 93, source/stylesheets/_tab.scss */
+      /* line 110, source/stylesheets/_tab.scss */
       .panel_area #panel1 .payment_btn .payment-btn {
         color: white;
         background: #20AEE4;
@@ -596,42 +612,53 @@ body {
         border: solid 1px #2f97bf;
         -webkit-box-shadow: 0 1px 0 0 #2f97bf;
                 box-shadow: 0 1px 0 0 #2f97bf; }
-  /* line 107, source/stylesheets/_tab.scss */
+  /* line 124, source/stylesheets/_tab.scss */
   .panel_area .show {
     display: block; }
 
 /* line 1, source/stylesheets/_kaikei.scss */
 .kaikei {
   text-decoration: none;
-  list-style: none; }
-  /* line 5, source/stylesheets/_kaikei.scss */
+  list-style: none;
+  position: relative;
+  height: calc(100% - 100px); }
+  /* line 7, source/stylesheets/_kaikei.scss */
   .kaikei-item {
     border-bottom: 1px solid #d6d6d6;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: #fff;
     padding: 20px 12%;
     color: #555; }
-    /* line 13, source/stylesheets/_kaikei.scss */
+    /* line 16, source/stylesheets/_kaikei.scss */
     .kaikei-item .value {
       margin-left: auto;
       display: flex; }
-      /* line 16, source/stylesheets/_kaikei.scss */
+      /* line 19, source/stylesheets/_kaikei.scss */
       .kaikei-item .value::before {
         content: "¥"; }
-  /* line 22, source/stylesheets/_kaikei.scss */
+    /* line 24, source/stylesheets/_kaikei.scss */
+    .kaikei-item .trash {
+      height: 20px;
+      margin-left: 20px;
+      display: none; }
+  /* line 31, source/stylesheets/_kaikei.scss */
   .kaikei .edit_css .name, .kaikei .edit_css .value {
-    border-bottom: 1px solid #d6d6d6;
-    width: 45%; }
-  /* line 28, source/stylesheets/_kaikei.scss */
+    border-bottom: 1px solid #d6d6d6; }
+  /* line 39, source/stylesheets/_kaikei.scss */
   .kaikei .kaikei-placeholder {
     -webkit-box-shadow: 0 0 4px 4px #edfcff;
             box-shadow: 0 0 4px 4px #edfcff;
     padding: 20px 12%;
     background: #edfcff; }
 
-/* line 36, source/stylesheets/_kaikei.scss */
+/* line 47, source/stylesheets/_kaikei.scss */
 .edit_input {
   -webkit-box-shadow: 0 0 4px 4px #edfcff;
-          box-shadow: 0 0 4px 4px #edfcff; }
+          box-shadow: 0 0 4px 4px #edfcff;
+  width: 100%; }
 
 /* line 1, source/stylesheets/_tenkey.scss */
 .tenkey {

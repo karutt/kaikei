@@ -4,6 +4,7 @@ $('.kaikei').sortable({
   cursor: "move",
   opacity: 0.7,
   placeholder: "kaikei-placeholder",
+  distance: 5,
 });
 $('.kaikei').sortable("disable")
 set_sortable = (on) => $('.kaikei').sortable(on ? "enable": "disable")
@@ -15,11 +16,21 @@ $(".edit_area-body").on("click", function() {
     // edit_mode オフ
     set_sortable(false)
     $(".kaikei").removeClass("edit_mode")
+    $(".panel-wrapper").stop().animate({'backgroundColor': '#ffffff'}, 100, "easeOutCubic")
+    $(".edit_css .name, .edit_css .value").css({'width': 'auto'})
+    $(".trash").fadeOut(10)
+    $(".edit_area-add_btn").fadeOut(10)
+    $(".edit_area-body").stop().animate({'borderLeftWidth': '0px'}, 100, "easeOutCubic")
     $(".kaikei-item").removeClass("edit_css")
   } else {
     // edit_mode オン
     $(".stock-body-panel").remove()
     $(".kaikei-item").addClass("edit_css")
+    $(".edit_css .name, .edit_css .value").stop().animate({'width': '45%'}, 100, "easeOutCubic")
+    $(".trash").fadeIn(100)
+    $(".edit_area-add_btn").fadeIn(100)
+    $(".panel-wrapper").stop().animate({'backgroundColor': '#f7f7f7'}, 100, "easeOutCubic")
+    $(".edit_area-body").stop().animate({'borderLeftWidth': '15px'}, 100, "easeOutCubic")
     $(".kaikei").addClass("edit_mode")
     set_sortable(true)
   }
