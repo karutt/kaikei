@@ -19,10 +19,23 @@ $(".custom-tenkey td.number").on("click", function() {
 
 // add key
 $(".add_to_stock").on("click", function() {
-  v = $(".custom-head-value").html()
-  $(".stock-body").append(stock_template("カスタム商品", v))
-  $(".stock-body:last()").stop().animate({'backgroundColor': '#e6f7ff'}, 0, function() {
-    $(this).animate({'backgroundColor': '#ffffff'}, 500)
-  });
-  calc_sum()
+  v = removecomma($(".custom-head-value").html())
+  if(v!=0) {
+    $(".stock-body").append(stock_template("カスタム商品", v))
+    $(".stock-body:last()").stop().animate({'backgroundColor': '#e6f7ff'}, 0, function() {
+      $(this).animate({'backgroundColor': '#ffffff'}, 500)
+    });
+    calc_sum()
+    $(".custom-head-value").html("0")
+  }
+})
+
+$("body").on("click", function() {
+  v = removecomma($(".custom-head-value").html())
+  console.log(v)
+  if(v==0) {
+    $(".add_to_stock").css({backgroundColor: "#f7f7f7"})
+  } else {
+    $(".add_to_stock").css({backgroundColor: "#edfcff"})
+  }
 })
