@@ -590,7 +590,7 @@ body {
 .edit_input {
   -webkit-box-shadow: 0 0 4px 4px #edfcff;
           box-shadow: 0 0 4px 4px #edfcff;
-  width: 100%; }
+  width: calc(100% - 1em); }
 
 /* line 45, source/stylesheets/_kaikei.scss */
 #panel1 {
@@ -608,7 +608,7 @@ body {
     width: 35%;
     border-right: 1px solid #d6d6d6; }
     /* line 53, source/stylesheets/_kaikei.scss */
-    #panel1 .edit_area-body, #panel1 .edit_area-add_btn {
+    #panel1 .edit_area-body, #panel1 .edit_area-add_btn, #panel1 .edit_area-remove_btn {
       display: flex;
       justify-content: normal;
       align-items: center;
@@ -622,24 +622,55 @@ body {
       font-size: 18px;
       color: #767676; }
       /* line 63, source/stylesheets/_kaikei.scss */
-      #panel1 .edit_area-body .edit_btn, #panel1 .edit_area-add_btn .edit_btn {
+      #panel1 .edit_area-body .edit_btn, #panel1 .edit_area-add_btn .edit_btn, #panel1 .edit_area-remove_btn .edit_btn {
         width: 20px;
         margin-right: 10px; }
       /* line 67, source/stylesheets/_kaikei.scss */
-      #panel1 .edit_area-body .add_btn, #panel1 .edit_area-add_btn .add_btn {
+      #panel1 .edit_area-body .add_btn, #panel1 .edit_area-add_btn .add_btn, #panel1 .edit_area-remove_btn .add_btn {
         width: 20px;
         margin-right: 10px;
         margin-left: 10px; }
       /* line 72, source/stylesheets/_kaikei.scss */
-      #panel1 .edit_area-body .connecter, #panel1 .edit_area-add_btn .connecter {
+      #panel1 .edit_area-body .connecter, #panel1 .edit_area-add_btn .connecter, #panel1 .edit_area-remove_btn .connecter {
         height: 100%;
         margin-right: -10px; }
     /* line 78, source/stylesheets/_kaikei.scss */
-    #panel1 .edit_area-add_btn {
+    #panel1 .edit_area-add_btn, #panel1 .edit_area-remove_btn {
       font-size: 16px;
+      padding-left: 60px;
       border-bottom: none;
-      display: none; }
-  /* line 85, source/stylesheets/_kaikei.scss */
+      display: flex;
+      align-items: flex-end;
+      height: 45px;
+      position: relative; }
+      /* line 86, source/stylesheets/_kaikei.scss */
+      #panel1 .edit_area-add_btn:before, #panel1 .edit_area-remove_btn:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 50px;
+        width: 20px;
+        height: calc(100% - .5em);
+        border-left: 1px solid #767676; }
+      /* line 95, source/stylesheets/_kaikei.scss */
+      #panel1 .edit_area-add_btn:after, #panel1 .edit_area-remove_btn:after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 50px;
+        width: 20px;
+        height: calc(100% - .5em);
+        border-bottom: 1px solid #767676; }
+    /* line 107, source/stylesheets/_kaikei.scss */
+    #panel1 .edit_area-add_btn:before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 50px;
+      width: 20px;
+      height: calc(100%);
+      border-left: 1px solid #767676; }
+  /* line 120, source/stylesheets/_kaikei.scss */
   #panel1 .menu-wrapper {
     height: 100%;
     width: calc(100% - 35%);
@@ -647,7 +678,7 @@ body {
     justify-content: flex-end;
     align-items: strech;
     flex-direction: column; }
-  /* line 90, source/stylesheets/_kaikei.scss */
+  /* line 125, source/stylesheets/_kaikei.scss */
   #panel1 .payment_btn {
     margin-top: auto;
     height: 100px;
@@ -659,7 +690,7 @@ body {
     flex-direction: row;
     border-top: solid 1px #d6d6d6;
     padding-right: 12%; }
-    /* line 98, source/stylesheets/_kaikei.scss */
+    /* line 133, source/stylesheets/_kaikei.scss */
     #panel1 .payment_btn .payment-btn {
       color: white;
       width: 70%;
@@ -672,7 +703,7 @@ body {
       border: solid 1px #d6d6d6;
       -webkit-box-shadow: 0 1px 0 0 #d6d6d6;
               box-shadow: 0 1px 0 0 #d6d6d6; }
-    /* line 110, source/stylesheets/_kaikei.scss */
+    /* line 145, source/stylesheets/_kaikei.scss */
     #panel1 .payment_btn .payment-btn-active {
       background: #20AEE4;
       border: solid 1px #2f97bf;

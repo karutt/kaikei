@@ -11,6 +11,7 @@ set_sortable = (on) => $('.menu').sortable(on ? "enable": "disable")
 
 // editボタンをクリック
 edit_mode = false
+$(".edit_area-add_btn, .edit_area-remove_btn").fadeOut(0)
 $(".edit_area-body").on("click", function() {
   if(edit_mode) {
     // edit_mode オフ
@@ -19,7 +20,7 @@ $(".edit_area-body").on("click", function() {
     $(".panel-wrapper").stop().animate({'backgroundColor': '#ffffff'}, 100, "easeOutCubic")
     $(".edit_css .name, .edit_css .value").css({'width': 'auto'})
     $(".trash").fadeOut(10)
-    $(".edit_area-add_btn").fadeOut(10)
+    $(".edit_area-add_btn, .edit_area-remove_btn").fadeOut(10)
     $(".edit_area-body").stop().animate({'borderLeftWidth': '0px'}, 100, "easeOutCubic")
     $(".menu-item").removeClass("edit_css")
   } else {
@@ -29,7 +30,7 @@ $(".edit_area-body").on("click", function() {
     $(".menu-item").addClass("edit_css")
     $(".edit_css .name, .edit_css .value").stop().animate({'width': '45%'}, 100, "easeOutCubic")
     $(".trash").fadeIn(100)
-    $(".edit_area-add_btn").fadeIn(100)
+    $(".edit_area-add_btn, .edit_area-remove_btn").fadeIn(100)
     $(".panel-wrapper").stop().animate({'backgroundColor': '#f7f7f7'}, 100, "easeOutCubic")
     $(".edit_area-body").stop().animate({'borderLeftWidth': '15px'}, 100, "easeOutCubic")
     $(".menu").addClass("edit_mode")

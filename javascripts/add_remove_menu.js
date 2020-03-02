@@ -13,6 +13,18 @@ $(".menu").on("click", ".trash", function() {
     $(this).parent().stop().fadeOut(150).animate({'height': '0','fontSize': '0', 'pading': '0', 'margin': '0'},
     { duration: 150, queue: false, easing: 'easeOutCubic', complete: function(){$(this).remove()}});
   } else {
-    alert("メニューの数を０個にはできません。")
+    $(".menu-item .name").html("未設定")
+    $(".menu-item .value").html("0")
+  }
+})
+
+$(".edit_area-remove_btn").on("click",  function() {
+  target = $(".menu-item:last")
+  if($(".menu-item").length > 1) {
+    target.stop().fadeOut(50).animate({'height': '0','fontSize': '0', 'pading': '0', 'margin': '0'},
+    { duration: 50, queue: false, easing: 'easeOutCubic', complete: function(){target.remove()}});
+  } else {
+    $(".menu-item .name").html("未設定")
+    $(".menu-item .value").html("0")
   }
 })
