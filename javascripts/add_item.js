@@ -28,9 +28,8 @@ $("body").click(function() {
   }
 })
 
-$(".menu").on("click", ".menu-item", function() {
-  if(!$(".menu").hasClass("edit_mode")) {
-
+$(".menu-body-list").on("click", ".menu-body-list-item", function() {
+  if(!$(".menu-body-list").hasClass("edit_mode")) {
 
     name = $(this).children(".name").html()
     value = $(this).children(".value").html()
@@ -50,3 +49,6 @@ $(".menu").on("click", ".menu-item", function() {
     calc_sum()
   }
 })
+
+// メニューリストからリストアイテムがはみ出てもスクロールできるように高さを指定
+$(".menu-body").css({height: $(".menu-edit").height()+"px"})

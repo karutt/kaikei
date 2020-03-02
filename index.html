@@ -61,48 +61,81 @@
     <div id="panel1" class="tab_panel">
       
 
-<div class="edit_area">
-  <div class="edit_area-body">
-    <img src="/kaikei/images/edit.svg" class="edit_btn" alt="Edit" />メニュー編集
+<div class="menu">
+  <div class="menu-edit">
+    <div class="menu-edit-body">
+      <img src="/kaikei/images/edit.svg" class="edit_btn" alt="Edit" />メニュー編集
+    </div>
+    <div class="menu-edit-add_btn">
+      <img src="/kaikei/images/add.svg" class="add_btn" alt="Add" />メニューの追加
+    </div>
+    <div class="menu-edit-remove_btn">
+      <img src="/kaikei/images/minus.svg" class="add_btn" alt="Minus" />メニューの削除
+    </div>
   </div>
-  <div class="edit_area-add_btn">
-    <img src="/kaikei/images/add.svg" class="add_btn" alt="Add" />メニューの追加
-  </div>
-  <div class="edit_area-remove_btn">
-    <img src="/kaikei/images/minus.svg" class="add_btn" alt="Minus" />メニューの削除
+
+  <div class="menu-body">
+    <ul class="menu-body-list">
+      <li class="menu-body-list-item">
+        <div class="name">ピザ</div>
+        <div class="value">200</div>
+        <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
+      </li>
+      <li class="menu-body-list-item">
+        <div class="name">サンドイッチ</div>
+        <div class="value">300</div>
+        <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
+      </li>
+      <li class="menu-body-list-item">
+        <div class="name">焼きリンゴ</div>
+        <div class="value">200</div>
+        <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
+      </li>
+      <li class="menu-body-list-item">
+        <div class="name">焼き芋</div>
+        <div class="value">150</div>
+        <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
+      </li>
+    </ul>
   </div>
 </div>
 
-<div class="menu-wrapper">
-  <ul class="menu">
-    <li class="menu-item">
-      <div class="name">ピザ</div>
-      <div class="value">200</div>
-      <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
-    </li>
-    <li class="menu-item">
-      <div class="name">サンドイッチ</div>
-      <div class="value">300</div>
-      <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
-    </li>
-    <li class="menu-item">
-      <div class="name">焼きリンゴ</div>
-      <div class="value">200</div>
-      <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
-    </li>
-    <li class="menu-item">
-      <div class="name">焼き芋</div>
-      <div class="value">150</div>
-      <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
-    </li>
-  </ul>
-  <div class="payment_btn"><a class="payment-btn" href="#">支払いへ進む</a></div>
-</div>
+<div class="payment_btn"><a class="payment-btn" href="#">支払いへ進む</a></div>
 
     </div>
 
     <div id="panel2" class="tab_panel">
-      
+      <div class="custom">
+  <div class="custom-head">
+    <div class="custom-head-value">0</div>
+  </div>
+  <table class="custom-tenkey">
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td class="custom-tenkey-remove"><img src="/kaikei/images/remove.svg" class="remove" alt="Remove" /></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td rowspan="3">垂直方向の結合</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>00</td>
+      <td class="custom-tenkey-ac">AC</td>
+    </tr>
+  </table>
+</div>
+<div class="payment_btn"><a class="payment-btn" href="#">支払いへ進む</a></div>
+
     </div>
 
     <div id="panel3" class="tab_panel">
@@ -187,5 +220,6 @@
   <script src="/kaikei/javascripts/payment.js"></script>
   <script src="/kaikei/javascripts/edit_menu.js"></script>
   <script src="/kaikei/javascripts/add_remove_menu.js"></script>
+  <script src="/kaikei/javascripts/custom.js"></script>
 </body>
 </html>
