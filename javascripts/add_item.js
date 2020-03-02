@@ -1,25 +1,4 @@
 
-
-stock_template = (name, value)=> {
-  start = new Date()
-
-  start = start.getHours() + ":" + (String(start.getMinutes()).length < 2 ? "0"+start.getMinutes() :start.getMinutes() )
-  return `<div class="stock-body-panel">
-  <div class="stock-body-panel-wrapper" id="`+name+ `">
-  <div class="stock-body-panel-head">
-  <div class="name">`+name+`</div>
-  <div class="time">`+start+`</div>
-  </div>
-  <div class="stock-body-panel-body">
-  <div class="num">1</div>
-  <div class="mult">×</div>
-  <div class="value">`+value+`</div>
-  </div>
-  </div>
-  <div class="stock-body-panel-remove">削除</div>
-  </div>`
-}
-
 $("body").click(function() {
   if($(".stock-body-panel").length > 0) {
     $(".payment-btn").addClass("payment-btn-active")

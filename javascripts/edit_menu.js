@@ -17,7 +17,7 @@ $(".menu-edit-body").on("click", function() {
     // edit_mode オフ
     set_sortable(false)
     $(".menu-body-list").removeClass("edit_mode")
-    $(".panel-wrapper").stop().animate({'backgroundColor': '#ffffff'}, 100, "easeOutCubic")
+    $(".menu-body").stop().animate({'backgroundColor': '#ffffff'}, 100, "easeOutCubic")
     $(".edit_css .name, .edit_css .value").css({'width': 'auto'})
     $(".trash").fadeOut(10)
     $(".menu-edit-add_btn, .menu-edit-remove_btn").fadeOut(10)
@@ -31,7 +31,7 @@ $(".menu-edit-body").on("click", function() {
     $(".edit_css .name, .edit_css .value").stop().animate({'width': '45%'}, 100, "easeOutCubic")
     $(".trash").fadeIn(100)
     $(".menu-edit-add_btn, .menu-edit-remove_btn").fadeIn(100)
-    $(".panel-wrapper").stop().animate({'backgroundColor': '#f7f7f7'}, 100, "easeOutCubic")
+    $(".menu-body").stop().animate({'backgroundColor': '#f7f7f7'}, 100, "easeOutCubic")
     $(".menu-edit-body").stop().animate({'borderLeftWidth': '15px'}, 100, "easeOutCubic")
     $(".menu-body-list").addClass("edit_mode")
     set_sortable(true)

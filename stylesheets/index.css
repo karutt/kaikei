@@ -307,7 +307,7 @@ textarea,
 [tabindex] {
   -ms-touch-action: manipulation;
   touch-action: manipulation; }
-/* line 15, source/stylesheets/_index.scss */
+/* line 17, source/stylesheets/_index.scss */
 body, html {
   height: 100%;
   background: white;
@@ -316,7 +316,7 @@ body, html {
   position: fixed;
   width: 100%; }
 
-/* line 23, source/stylesheets/_index.scss */
+/* line 25, source/stylesheets/_index.scss */
 body {
   user-select: none;
   -webkit-user-select: none;
@@ -326,15 +326,15 @@ body {
   -webkit-user-drag: none;
   -khtml-user-drag: none; }
 
-/* line 33, source/stylesheets/_index.scss */
+/* line 35, source/stylesheets/_index.scss */
 .wrapper {
   display: flex;
   height: 100%; }
-  /* line 36, source/stylesheets/_index.scss */
+  /* line 38, source/stylesheets/_index.scss */
   .wrapper .stock {
     flex-basis: 33%;
     height: 100%; }
-  /* line 40, source/stylesheets/_index.scss */
+  /* line 42, source/stylesheets/_index.scss */
   .wrapper .tab_wrap {
     flex-basis: 67%;
     height: 100%; }
@@ -873,25 +873,21 @@ body {
 
 /* line 1, source/stylesheets/_custom.scss */
 #panel2 {
-  display: flex;
-  justify-content: normal;
-  align-items: normal;
-  flex-direction: column;
-  height: 100%; }
+  height: calc(100% - 80px); }
 
-/* line 6, source/stylesheets/_custom.scss */
+/* line 7, source/stylesheets/_custom.scss */
 .custom {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 75%;
-  height: calc(100% - 80px);
-  max-width: 600px; }
-  /* line 12, source/stylesheets/_custom.scss */
+  width: 100%;
+  height: 100%;
+  padding: 20px 0; }
+  /* line 13, source/stylesheets/_custom.scss */
   .custom-head {
     height: 20%;
-    width: 100%;
+    width: 70%;
     border: solid 1px #d6d6d6;
     border-radius: 8px;
     display: flex;
@@ -899,18 +895,35 @@ body {
     align-items: center;
     flex-direction: row;
     padding-right: 5%; }
-    /* line 19, source/stylesheets/_custom.scss */
+    /* line 20, source/stylesheets/_custom.scss */
     .custom-head-value {
-      font-size: 70px;
+      font-size: 60px;
       color: #565656; }
-      /* line 22, source/stylesheets/_custom.scss */
+      /* line 23, source/stylesheets/_custom.scss */
       .custom-head-value::before {
         content: "¥"; }
-  /* line 25, source/stylesheets/_custom.scss */
+  /* line 27, source/stylesheets/_custom.scss */
+  .custom .custom-tenkey-wrapper {
+    height: calc(100% - 80px);
+    width: calc(70% + 20px); }
+  /* line 32, source/stylesheets/_custom.scss */
   .custom-tenkey {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    height: 80%;
-    width: 100%; }
+    height: 100%;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px 10px; }
+    /* line 37, source/stylesheets/_custom.scss */
+    .custom-tenkey .remove {
+      width: 40px; }
+    /* line 40, source/stylesheets/_custom.scss */
+    .custom-tenkey th, .custom-tenkey td {
+      font-weight: normal;
+      width: 25%;
+      padding: 10px;
+      text-align: center;
+      border: solid 1px #d6d6d6;
+      border-bottom: solid 2px #d6d6d6;
+      font-size: 24px;
+      border-radius: 4px;
+      background: #f7f7f7;
+      color: #888; }
