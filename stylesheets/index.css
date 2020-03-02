@@ -641,7 +641,7 @@ body {
       border-bottom: none;
       display: flex;
       align-items: flex-end;
-      height: 45px;
+      height: 55px;
       position: relative; }
       /* line 86, source/stylesheets/_kaikei.scss */
       #panel1 .edit_area-add_btn:before, #panel1 .edit_area-remove_btn:before {
