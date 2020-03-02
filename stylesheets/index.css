@@ -655,13 +655,16 @@ body {
     z-index: 2;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
+    border-top: solid 1px #d6d6d6;
     padding-right: 12%; }
-    /* line 97, source/stylesheets/_kaikei.scss */
+    /* line 98, source/stylesheets/_kaikei.scss */
     #panel1 .payment_btn .payment-btn {
       color: white;
-      padding: 15px 80px;
+      width: 70%;
+      text-align: center;
+      padding: 15px;
       font-size: 20px;
       border-radius: 6px;
       font-weight: bold;
@@ -669,7 +672,7 @@ body {
       border: solid 1px #d6d6d6;
       -webkit-box-shadow: 0 1px 0 0 #d6d6d6;
               box-shadow: 0 1px 0 0 #d6d6d6; }
-    /* line 107, source/stylesheets/_kaikei.scss */
+    /* line 110, source/stylesheets/_kaikei.scss */
     #panel1 .payment_btn .payment-btn-active {
       background: #20AEE4;
       border: solid 1px #2f97bf;
