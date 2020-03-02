@@ -1,13 +1,13 @@
 
 // sortableの設定
-$('.kaikei').sortable({
+$('.menu').sortable({
   cursor: "move",
   opacity: 0.7,
-  placeholder: "kaikei-placeholder",
+  placeholder: "menu-placeholder",
   distance: 5,
 });
-$('.kaikei').sortable("disable")
-set_sortable = (on) => $('.kaikei').sortable(on ? "enable": "disable")
+$('.menu').sortable("disable")
+set_sortable = (on) => $('.menu').sortable(on ? "enable": "disable")
 
 // editボタンをクリック
 edit_mode = false
@@ -15,23 +15,24 @@ $(".edit_area-body").on("click", function() {
   if(edit_mode) {
     // edit_mode オフ
     set_sortable(false)
-    $(".kaikei").removeClass("edit_mode")
+    $(".menu").removeClass("edit_mode")
     $(".panel-wrapper").stop().animate({'backgroundColor': '#ffffff'}, 100, "easeOutCubic")
     $(".edit_css .name, .edit_css .value").css({'width': 'auto'})
     $(".trash").fadeOut(10)
     $(".edit_area-add_btn").fadeOut(10)
     $(".edit_area-body").stop().animate({'borderLeftWidth': '0px'}, 100, "easeOutCubic")
-    $(".kaikei-item").removeClass("edit_css")
+    $(".menu-item").removeClass("edit_css")
   } else {
     // edit_mode オン
     $(".stock-body-panel").remove()
-    $(".kaikei-item").addClass("edit_css")
+    $(".sum_num, .sum_value").html("0")
+    $(".menu-item").addClass("edit_css")
     $(".edit_css .name, .edit_css .value").stop().animate({'width': '45%'}, 100, "easeOutCubic")
     $(".trash").fadeIn(100)
     $(".edit_area-add_btn").fadeIn(100)
     $(".panel-wrapper").stop().animate({'backgroundColor': '#f7f7f7'}, 100, "easeOutCubic")
     $(".edit_area-body").stop().animate({'borderLeftWidth': '15px'}, 100, "easeOutCubic")
-    $(".kaikei").addClass("edit_mode")
+    $(".menu").addClass("edit_mode")
     set_sortable(true)
   }
   edit_mode = !edit_mode
@@ -41,7 +42,7 @@ $(".edit_area-body").on("click", function() {
 edit_text = function(parent, child) {
 
   $(parent).on("click", child, function(){
-    if($(".kaikei").hasClass("edit_mode")) {
+    if($(".menu").hasClass("edit_mode")) {
       if(!$(this).hasClass('on')){
         $(this).addClass('on');
         const txt = $(this).text();
@@ -52,13 +53,13 @@ edit_text = function(parent, child) {
   });
 
   $(parent).on('keypress', child, "input.edit_input:focus", function(e){
-    if($(".kaikei").hasClass("edit_mode")) {
+    if($(".menu").hasClass("edit_mode")) {
       if ( e.which == 13 ) {$(this).children("input")[0].blur()}
     }
   });
 
   $(parent).on('blur', child, "input.edit_input", function(){
-    if($(".kaikei").hasClass("edit_mode")) {
+    if($(".menu").hasClass("edit_mode")) {
       text = $(this).children("input").val()
       console.log(text)
       $(this).removeClass("on")
@@ -67,4 +68,4 @@ edit_text = function(parent, child) {
   });
 
 }
-edit_text(".kaikei", ".kaikei-item .name, .kaikei-item .value")
+edit_text(".menu", ".menu-item .name, .menu-item .value")

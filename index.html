@@ -13,7 +13,6 @@
 <body>
   <div class="wrapper">
 
-
 <div class="stock">
   <div class="stock-head">
     <a href="#" class="reset_btn">
@@ -23,6 +22,7 @@
 
   <div class="stock-wrapper">
     <div class="stock-body">
+      <!-- ここにstock-itemが挿入されます！ -->
     </div>
   </div>
 
@@ -30,7 +30,6 @@
     <div class="sum_num">0</div>
     <div class="sum_value">0</div>
   </div>
-
 </div>
 
 <!-- <div class="stock-body-panel">
@@ -52,55 +51,59 @@
 
 <div class="tab_wrap">
   <div class="tab_area">
-    <div class="tab_area_wrapper">
-      <a class="tab1_label label active" href="panel1">会計</a>
-      <a class="tab2_label label" href="panel2">カスタム商品</a>
-      <a class="tab3_label label" href="panel3">ヒストリー</a>
-    </div>
+    <ul class="tab_area_wrapper">
+      <li><a class="tab1_label label" href="#panel1">会計</a></li>
+      <li><a class="tab2_label label" href="#panel2">カスタム商品</a></li>
+      <li><a class="tab3_label label" href="#panel3">ヒストリー</a></li>
+    </ul>
   </div>
   <div class="panel_area">
-    <div id="panel1" class="tab_panel show">
-      <div class="edit_area">
-        <div class="edit_area-body">
-          <img src="/kaikei/images/edit.svg" class="edit_btn" alt="Edit" />メニュー編集
-        </div>
-        <div class="edit_area-add_btn">
-          <img src="/kaikei/images/connecter.svg" class="connecter" alt="Connecter" /><img src="/kaikei/images/add.svg" class="add_btn" alt="Add" />メニューの追加
-        </div>
-      </div>
-      <div class="panel-wrapper">
-        
+    <div id="panel1" class="tab_panel">
+      
 
-<ul class="kaikei">
-  <li class="kaikei-item">
-    <div class="name">ピザ</div>
-    <div class="value">200</div>
-    <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
-  </li>
-  <li class="kaikei-item">
-    <div class="name">サンドイッチ</div>
-    <div class="value">300</div>
-    <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
-  </li>
-  <li class="kaikei-item">
-    <div class="name">焼きリンゴ</div>
-    <div class="value">200</div>
-    <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
-  </li>
-  <li class="kaikei-item">
-    <div class="name">焼き芋</div>
-    <div class="value">150</div>
-    <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
-  </li>
-</ul>
+<div class="edit_area">
+  <div class="edit_area-body">
+    <img src="/kaikei/images/edit.svg" class="edit_btn" alt="Edit" />メニュー編集
+  </div>
+  <div class="edit_area-add_btn">
+    <img src="/kaikei/images/connecter.svg" class="connecter" alt="Connecter" /><img src="/kaikei/images/add.svg" class="add_btn" alt="Add" />メニューの追加
+  </div>
+</div>
 
-        <div class="payment_btn"><a class="payment-btn" href="#">支払いへ進む</a></div>
-      </div>
+<div class="menu-wrapper">
+  <ul class="menu">
+    <li class="menu-item">
+      <div class="name">ピザ</div>
+      <div class="value">200</div>
+      <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
+    </li>
+    <li class="menu-item">
+      <div class="name">サンドイッチ</div>
+      <div class="value">300</div>
+      <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
+    </li>
+    <li class="menu-item">
+      <div class="name">焼きリンゴ</div>
+      <div class="value">200</div>
+      <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
+    </li>
+    <li class="menu-item">
+      <div class="name">焼き芋</div>
+      <div class="value">150</div>
+      <img src="/kaikei/images/trash.svg" class="trash" alt="Trash" />
+    </li>
+  </ul>
+  <div class="payment_btn"><a class="payment-btn" href="#">支払いへ進む</a></div>
+</div>
+
     </div>
+
     <div id="panel2" class="tab_panel">
+      
     </div>
+
     <div id="panel3" class="tab_panel">
-      <p>panel3</p>
+      
     </div>
   </div>
 </div>

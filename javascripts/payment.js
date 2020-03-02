@@ -11,12 +11,14 @@ $(".close-btn").on("click", close_modal)
 
 // open modal
 $(".payment-btn").on("click", function() {
-  sum_value = removecomma($(".stock-foot > .sum_value").html())
-  $(".payment-head-value").html(addcomma(sum_value))
-  set_charge(sum_value)
-  set_tenkey_sp(sum_value)
-  $(".cover").stop().fadeIn(time-200)
-  $(".payment").stop().fadeIn(time+100).animate({'top': '1.5%'}, { duration: time, queue: false, easing: 'easeOutCubic'});
+  if($(this).hasClass("payment-btn-active")){
+    sum_value = removecomma($(".stock-foot > .sum_value").html())
+    $(".payment-head-value").html(addcomma(sum_value))
+    set_charge(sum_value)
+    set_tenkey_sp(sum_value)
+    $(".cover").stop().fadeIn(time-200)
+    $(".payment").stop().fadeIn(time+100).animate({'top': '1.5%'}, { duration: time, queue: false, easing: 'easeOutCubic'});
+  }
 })
 
 // tenkey

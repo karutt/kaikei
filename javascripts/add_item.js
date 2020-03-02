@@ -20,9 +20,18 @@ stock_template = (name, value)=> {
   </div>`
 }
 
+$("body").click(function() {
+  if($(".stock-body-panel").length > 0) {
+    $(".payment-btn").addClass("payment-btn-active")
+  } else {
+    $(".payment-btn").removeClass("payment-btn-active")
+  }
+})
 
-$(".kaikei").on("click", ".kaikei-item", function() {
-  if(!$(".kaikei").hasClass("edit_mode")) {
+$(".menu").on("click", ".menu-item", function() {
+  if(!$(".menu").hasClass("edit_mode")) {
+
+
     name = $(this).children(".name").html()
     value = $(this).children(".value").html()
     id = '#'+name

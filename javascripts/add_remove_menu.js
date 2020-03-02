@@ -1,15 +1,15 @@
 
 
 $(".edit_area-add_btn").on("click", function() {
-  console.log($(".kaikei-item:last"))
-  $(".kaikei-item:last").clone().appendTo('.kaikei');
-  $(".kaikei-item:last .name").html("未設定")
-  $(".kaikei-item:last .value").html("0")
-  $(".kaikei-item:last .value").css({display: "block"})
+  console.log($(".menu-item:last"))
+  $(".menu-item:last").clone().appendTo('.menu');
+  $(".menu-item:last .name").html("未設定")
+  $(".menu-item:last .value").html("0")
+  $(".menu-item:last .value").css({display: "block"})
 })
 
-$(".kaikei").on("click", ".trash", function() {
-  if($(".kaikei-item").length > 1) {
+$(".menu").on("click", ".trash", function() {
+  if($(".menu-item").length > 1) {
     $(this).parent().stop().fadeOut(150).animate({'height': '0','fontSize': '0', 'pading': '0', 'margin': '0'},
     { duration: 150, queue: false, easing: 'easeOutCubic', complete: function(){$(this).remove()}});
   } else {
