@@ -48,10 +48,12 @@ $(".menu-body-list").on("click", ".trash", function() {
     $demo1.floatThead('reflow');
   }
 })
+
 $(".menu-edit-remove_btn").on("click",  function() {
   if($(".menu-body-list-item").length > 1) {
     id = $(".menu-body-list-item:last .name").html()
     $("#"+id).remove()
+    $("."+id).remove()
     $demo1.floatThead('reflow');
   }
 })
@@ -98,6 +100,7 @@ $(".finish-btn").click(function() {
     insert_text += get_stock_data() + get_custom_data()
     insert_text = "<tr class='history-table-body'>" + insert_text + "</tr>"
     $(".history-table tbody").append(insert_text)
+    $(".stock-body-panel").remove()
     $demo1.floatThead('reflow');
   }
 })

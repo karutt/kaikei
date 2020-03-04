@@ -951,3 +951,15 @@ thead th {
   border: 1px solid #d6d6d6;
   background: #f7f7f7;
   font-size: 14px; }
+
+/* line 28, source/stylesheets/_history.scss */
+.history tbody {
+  font-size: 14px; }
+  /* line 31, source/stylesheets/_history.scss */
+  .history tbody td:nth-child(n+4)::after {
+    content: "個";
+    font-size: 12px;
+    margin-left: 2px; }
+  /* line 38, source/stylesheets/_history.scss */
+  .history tbody .合計::before, .history tbody .お預かり::before {
+    content: "¥"; }
