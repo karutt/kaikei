@@ -1,15 +1,17 @@
 
 // talbeの幅指定
 $(".history").css({width:$("#panel1").width()+"px"})
+$(".history").css({height:$("#panel1").height()+"px"})
 
 // デフォルトheaderの作成
 for(let key of ["時間", "合計", "お預かり"]) {
   $(".history-table-head").append("<th>"+key+"</th>")
 }
 insert_th = ""
-$(".menu-body-list-item .name").each(function() {
-  stock_name = $(this).html()
-  insert_th += "<th id='"+stock_name+"'>"+ stock_name + "</th>"
+$(".menu-body-list-item").each(function() {
+  stock_name = $(this).children(".name").html()
+  stock_value = $(this).children(".value").html()
+  insert_th += "<th id="+stock_name+" value="+stock_value+">"+ stock_name + "</th>"
 })
 $(".history-table-head").append(insert_th)
 $(".history-table-head").append("<th id='カスタム商品'>カスタム商品</th>")
@@ -24,7 +26,7 @@ $(".menu-edit-add_btn").click(function() {
   insert_th = "<th id='"+stock_name+"'>"+ stock_name + "</th>"
   insert_td = "<td class='"+stock_name+"'>0</td>"
   $(".history-table-head th:last").before(insert_th)
-  $(".history td").last().before(insert_td)
+  $(".history-table-body").each(function() {$(this).children("td").last().before(insert_td)})
 
 })
 
@@ -33,6 +35,7 @@ $(".menu-body-list").on("click", ".trash", function() {
   if($(".menu-body-list-item").length > 1) {
     id = $(this).parent().children(".name").html()
     $("#"+id).remove()
+    $("."+id).remove()
   }
 })
 $(".menu-edit-remove_btn").on("click",  function() {
@@ -43,6 +46,8 @@ $(".menu-edit-remove_btn").on("click",  function() {
 })
 
 // メニューヘッダーの編集　ーー（edit_menu.jsを参照
+
+// 会計後ヒストリーを追加（関数）
 get_stock_data = function() {
   stock_data = ""
   $(".history-table-head th").slice(3).each(function() {

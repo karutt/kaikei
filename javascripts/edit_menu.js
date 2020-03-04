@@ -64,10 +64,19 @@ edit_text = function(parent, child) {
       new_text = $(this).children("input").val()
       $(this).removeClass("on")
       $(this).html(new_text)
+
       //テーブルのヘッダーを変更
       target = $("#"+old_text)
-      target.attr("id", new_text)
-      target.html(new_text)
+      if(target.length) {
+        target.attr("id", new_text)
+        target.html(new_text)
+        target = $("."+old_text)
+        target.removeClass(old_text)
+        target.addClass(new_text)
+      } else {
+        id = $(this).parent().children(".name").html()
+        $("#"+id).attr("value", new_text)
+      }
     }
   });
 
