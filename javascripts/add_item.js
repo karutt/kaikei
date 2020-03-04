@@ -10,7 +10,7 @@ $("body").click(function() {
 $(".menu-body-list").on("click", ".menu-body-list-item", function() {
   if(!$(".menu-body-list").hasClass("edit_mode")) {
 
-    name = $(this).children(".name").html()
+    name ="_" + $(this).children(".name").html()
     value = $(this).children(".value").html()
     id = '#'+name
     if($(id).length) {

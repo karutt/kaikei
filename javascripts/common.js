@@ -33,7 +33,7 @@ window.stock_template = (name, value)=> {
   return `<div class="stock-body-panel">
   <div class="stock-body-panel-wrapper" id="`+name+ `">
   <div class="stock-body-panel-head">
-  <div class="name">`+name+`</div>
+  <div class="name">`+name.slice(1)+`</div>
   <div class="time">`+start+`</div>
   </div>
   <div class="stock-body-panel-body">

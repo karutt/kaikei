@@ -41,13 +41,13 @@ $(".menu-edit-body").on("click", function() {
 
 // テキストの編集
 edit_text = function(parent, child) {
-
+  old_text = ""
   $(parent).on("click", child, function(){
     if($(".menu-body-list").hasClass("edit_mode")) {
       if(!$(this).hasClass('on')){
         $(this).addClass('on');
-        const txt = $(this).text();
-        $(this).html('<input type="text" class="edit_input" value="'+txt+'" />');
+        old_text = $(this).text();
+        $(this).html('<input type="text" class="edit_input" value="'+old_text+'" />');
         $("input.edit_input").focus()
       }
     }
@@ -61,10 +61,13 @@ edit_text = function(parent, child) {
 
   $(parent).on('blur', child, "input.edit_input", function(){
     if($(".menu-body-list").hasClass("edit_mode")) {
-      text = $(this).children("input").val()
-      console.log(text)
+      new_text = $(this).children("input").val()
       $(this).removeClass("on")
-      $(this).html(text)
+      $(this).html(new_text)
+      //テーブルのヘッダーを変更
+      target = $("#"+old_text)
+      target.attr("id", new_text)
+      target.html(new_text)
     }
   });
 

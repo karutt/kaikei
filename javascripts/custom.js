@@ -21,7 +21,7 @@ $(".custom-tenkey td.number").on("click", function() {
 $(".add_to_stock").on("click", function() {
   v = removecomma($(".custom-head-value").html())
   if(v!=0) {
-    $(".stock-body").append(stock_template("カスタム商品", v))
+    $(".stock-body").append(stock_template("_カスタム商品", v))
     $(".stock-body:last()").stop().animate({'backgroundColor': '#e6f7ff'}, 0, function() {
       $(this).animate({'backgroundColor': '#ffffff'}, 500)
     });
