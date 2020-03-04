@@ -14,6 +14,9 @@ $(".menu-body-list-item .name").each(function() {
 $(".history-table-head").append(insert_th)
 $(".history-table-head").append("<th id='カスタム商品'>カスタム商品</th>")
 
+$("body").click(function() {
+  console.log()
+})
 
 //メニューヘッダーの追加
 $(".menu-edit-add_btn").click(function() {
@@ -21,10 +24,8 @@ $(".menu-edit-add_btn").click(function() {
   insert_th = "<th id='"+stock_name+"'>"+ stock_name + "</th>"
   insert_td = "<td class='"+stock_name+"'>0</td>"
   $(".history-table-head th:last").before(insert_th)
-  $(".history-table-body").each(function() {
-    console.log($(this).children("th").last(), $(this).children("th").last().html())
-    $(this).children("th").last().before(insert_td)
-  })
+  $(".history td").last().before(insert_td)
+
 })
 
 //メニューヘッダーの削除
