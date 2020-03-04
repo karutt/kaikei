@@ -929,16 +929,25 @@ body {
       background: #f7f7f7;
       color: #888; }
 
-/* line 1, source/stylesheets/_history.scss */
+/* line 3, source/stylesheets/_history.scss */
 .history {
   overflow: auto; }
-  /* line 4, source/stylesheets/_history.scss */
-  .history table.history-table {
-    width: 100%;
+  /* line 5, source/stylesheets/_history.scss */
+  .history .history-table {
+    width: 100%; }
+  /* line 8, source/stylesheets/_history.scss */
+  .history th, .history td {
+    padding: 20px;
+    text-align: center;
+    white-space: nowrap;
     border: 1px solid #d6d6d6;
-    font-size: 16px; }
-    /* line 9, source/stylesheets/_history.scss */
-    .history table.history-table th, .history table.history-table td {
-      white-space: nowrap;
-      border: 1px solid #d6d6d6;
-      padding: 20px 10px; }
+    background: #fff; }
+
+/* line 19, source/stylesheets/_history.scss */
+thead th {
+  padding: 20px;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid #d6d6d6;
+  background: #f7f7f7;
+  font-size: 14px; }
