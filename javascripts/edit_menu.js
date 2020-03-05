@@ -40,13 +40,20 @@ $(".menu-edit-body").on("click", function() {
 })
 
 // テキストの編集
+
 edit_text = function(parent, child) {
-  old_text = ""
+
+  old_text = []
   $(parent).on("click", child, function(){
+
     if($(".menu-body-list").hasClass("edit_mode")) {
+
       if(!$(this).hasClass('on')){
+        //　もしもほかのinputを入力中だったらそれを中断して終わらせる。
+        if($(".edit_input").length) {$(".edit_input")[0].blur()}
+        
         $(this).addClass('on');
-        old_text = $(this).text();
+        old_text = $(this).text()
         $(this).html('<input type="text" class="edit_input" value="'+old_text+'" />');
         $("input.edit_input").focus()
       }
@@ -64,7 +71,6 @@ edit_text = function(parent, child) {
       new_text = $(this).children("input").val()
       $(this).removeClass("on")
       $(this).html(new_text)
-
       //テーブルのヘッダーを変更
       target = $("#"+old_text)
       if(target.length) {

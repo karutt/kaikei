@@ -28,7 +28,6 @@ document.addEventListener('touchend', function (event) {
 
 window.stock_template = (name, value)=> {
   start = new Date()
-
   start = start.getHours() + ":" + (String(start.getMinutes()).length < 2 ? "0"+start.getMinutes() :start.getMinutes() )
   return `<div class="stock-body-panel">
   <div class="stock-body-panel-wrapper" id="`+name+ `">
