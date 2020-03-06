@@ -18,8 +18,8 @@ $(".mtenkey-tenkey td.number").on("click", function() {
   $(".mtenkey-head-value").html(input)
 })
 
-mw = 342
-mh = 360
+mw = 398
+mh = 440
 bh = $("body").height()
 
 mtenkey_target = 0

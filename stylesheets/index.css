@@ -990,8 +990,8 @@ thead th {
   align-items: center;
   flex-direction: column;
   color: #555;
-  -webkit-box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.07);
   display: none; }
   /* line 14, source/stylesheets/_mtenkey.scss */
   .mtenkey-head {
@@ -1001,40 +1001,41 @@ thead th {
     justify-content: flex-end;
     align-items: center;
     flex-direction: row;
-    margin: 15px 0; }
-    /* line 20, source/stylesheets/_mtenkey.scss */
+    margin-top: 30px;
+    margin-bottom: 15px; }
+    /* line 21, source/stylesheets/_mtenkey.scss */
     .mtenkey-head-value {
-      font-size: 32px; }
-  /* line 25, source/stylesheets/_mtenkey.scss */
+      font-size: 38px; }
+  /* line 26, source/stylesheets/_mtenkey.scss */
   .mtenkey-tenkey {
     height: 100%;
     width: 100%; }
-    /* line 28, source/stylesheets/_mtenkey.scss */
+    /* line 29, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey .remove {
-      width: 30px; }
-    /* line 31, source/stylesheets/_mtenkey.scss */
+      width: 40px; }
+    /* line 32, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey .confirm {
       color: #20AEE4;
-      font-size: 18px; }
-    /* line 35, source/stylesheets/_mtenkey.scss */
+      font-size: 22px; }
+    /* line 36, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey .mtenkey-tenkey-ac {
       background: #fcfcfc; }
-    /* line 38, source/stylesheets/_mtenkey.scss */
+    /* line 39, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey th, .mtenkey-tenkey td {
       font-weight: normal;
-      width: 90px;
-      height: 66px;
+      width: 110px;
+      height: 74px;
       text-align: center;
       border: solid .1px #ececec;
-      font-size: 22px;
+      font-size: 28px;
       border-radius: 4px;
       background: white; }
-    /* line 48, source/stylesheets/_mtenkey.scss */
+    /* line 49, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey td:first-child {
       border-left: none; }
-    /* line 51, source/stylesheets/_mtenkey.scss */
+    /* line 52, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey td:last-child {
       border-right: none; }
-    /* line 54, source/stylesheets/_mtenkey.scss */
+    /* line 55, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey tr:last-child td, .mtenkey-tenkey .confirm {
       border-bottom: none; }
