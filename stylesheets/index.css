@@ -434,31 +434,37 @@ body {
         margin-top: 10px;
         font-size: 20px;
         color: #555; }
-        /* line 83, source/stylesheets/_stock.scss */
+        /* line 84, source/stylesheets/_stock.scss */
         .stock-body-panel-body .num {
           padding: 8px 10px;
-          padding-left: 30px;
+          padding-left: 60px;
           border: 1px solid #d6d6d6;
-          border-radius: 4px; }
-        /* line 89, source/stylesheets/_stock.scss */
+          border-radius: 4px;
+          position: relative; }
+        /* line 91, source/stylesheets/_stock.scss */
         .stock-body-panel-body .mult {
           margin: 0 10px;
           color: #999;
           font-size: 20px; }
-        /* line 94, source/stylesheets/_stock.scss */
+        /* line 96, source/stylesheets/_stock.scss */
         .stock-body-panel-body .value {
           padding: 8px 10px;
           padding-left: 80px;
           border: 1px solid #d6d6d6;
           border-radius: 4px; }
-          /* line 99, source/stylesheets/_stock.scss */
+          /* line 101, source/stylesheets/_stock.scss */
           .stock-body-panel-body .value::before {
             content: "¥"; }
-        /* line 103, source/stylesheets/_stock.scss */
-        .stock-body-panel-body .reduce_num {
-          width: 30px;
-          margin-left: auto; }
-  /* line 112, source/stylesheets/_stock.scss */
+        /* line 105, source/stylesheets/_stock.scss */
+        .stock-body-panel-body .triangle {
+          position: absolute;
+          border: 20px solid transparent;
+          border-right: 15px solid #ffffff;
+          z-index: 10;
+          left: 0;
+          top: 50%;
+          display: none; }
+  /* line 119, source/stylesheets/_stock.scss */
   .stock-foot {
     display: flex;
     justify-content: normal;
@@ -469,22 +475,22 @@ body {
     border-right: none;
     height: 80px;
     margin-top: auto; }
-    /* line 119, source/stylesheets/_stock.scss */
+    /* line 126, source/stylesheets/_stock.scss */
     .stock-foot .sum_num {
       font-size: 18px; }
-      /* line 121, source/stylesheets/_stock.scss */
+      /* line 128, source/stylesheets/_stock.scss */
       .stock-foot .sum_num::after {
         color: #aaa;
         font-size: 12px;
         content: "点"; }
-    /* line 127, source/stylesheets/_stock.scss */
+    /* line 134, source/stylesheets/_stock.scss */
     .stock-foot .sum_value {
       margin-left: auto;
       font-size: 24px; }
-      /* line 130, source/stylesheets/_stock.scss */
+      /* line 137, source/stylesheets/_stock.scss */
       .stock-foot .sum_value::before {
         content: "¥"; }
-      /* line 133, source/stylesheets/_stock.scss */
+      /* line 140, source/stylesheets/_stock.scss */
       .stock-foot .sum_value::after {
         color: #aaa;
         font-size: 12px;
@@ -970,3 +976,67 @@ thead th {
   /* line 38, source/stylesheets/_history.scss */
   .history tbody .合計::before, .history tbody .お預かり::before {
     content: "¥"; }
+
+/* line 1, source/stylesheets/_mtenkey.scss */
+.mtenkey {
+  position: absolute;
+  background: #fff;
+  left: 50%;
+  top: 30%;
+  z-index: 9;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #555;
+  -webkit-box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.05);
+  display: none; }
+  /* line 14, source/stylesheets/_mtenkey.scss */
+  .mtenkey-head {
+    padding-right: 5%;
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    background: #fcfcfc;
+    margin-top: 30px; }
+    /* line 21, source/stylesheets/_mtenkey.scss */
+    .mtenkey-head-value {
+      font-size: 32px; }
+  /* line 26, source/stylesheets/_mtenkey.scss */
+  .mtenkey-tenkey {
+    height: 100%;
+    width: 100%; }
+    /* line 29, source/stylesheets/_mtenkey.scss */
+    .mtenkey-tenkey .remove {
+      width: 30px; }
+    /* line 32, source/stylesheets/_mtenkey.scss */
+    .mtenkey-tenkey .confirm {
+      color: #20AEE4;
+      font-size: 18px; }
+    /* line 36, source/stylesheets/_mtenkey.scss */
+    .mtenkey-tenkey .mtenkey-tenkey-ac {
+      background: #fcfcfc; }
+    /* line 39, source/stylesheets/_mtenkey.scss */
+    .mtenkey-tenkey th, .mtenkey-tenkey td {
+      font-weight: normal;
+      width: 80px;
+      height: 54px;
+      text-align: center;
+      border: solid .1px #ececec;
+      font-size: 22px;
+      border-radius: 4px;
+      background: white; }
+    /* line 49, source/stylesheets/_mtenkey.scss */
+    .mtenkey-tenkey td:first-child {
+      border-left: none; }
+    /* line 52, source/stylesheets/_mtenkey.scss */
+    .mtenkey-tenkey td:last-child {
+      border-right: none; }
+    /* line 55, source/stylesheets/_mtenkey.scss */
+    .mtenkey-tenkey tr:last-child td, .mtenkey-tenkey .confirm {
+      border-bottom: none; }

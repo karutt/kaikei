@@ -39,6 +39,7 @@ window.stock_template = (name, value)=> {
   <div class="num">1</div>
   <div class="mult">×</div>
   <div class="value">`+value+`</div>
+  <div class="triangle"></div>
   </div>
   </div>
   <div class="stock-body-panel-remove">削除</div>

@@ -32,7 +32,6 @@ $(".add_to_stock").on("click", function() {
 
 $("body").on("click", function() {
   v = removecomma($(".custom-head-value").html())
-  console.log(v)
   if(v==0) {
     $(".add_to_stock").css({backgroundColor: "#f7f7f7"})
   } else {
