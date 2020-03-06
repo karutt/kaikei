@@ -997,46 +997,44 @@ thead th {
   .mtenkey-head {
     padding-right: 5%;
     width: 100%;
-    height: 54px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: row;
-    background: #fcfcfc;
-    margin-top: 30px; }
-    /* line 21, source/stylesheets/_mtenkey.scss */
+    margin: 15px 0; }
+    /* line 20, source/stylesheets/_mtenkey.scss */
     .mtenkey-head-value {
       font-size: 32px; }
-  /* line 26, source/stylesheets/_mtenkey.scss */
+  /* line 25, source/stylesheets/_mtenkey.scss */
   .mtenkey-tenkey {
     height: 100%;
     width: 100%; }
-    /* line 29, source/stylesheets/_mtenkey.scss */
+    /* line 28, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey .remove {
       width: 30px; }
-    /* line 32, source/stylesheets/_mtenkey.scss */
+    /* line 31, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey .confirm {
       color: #20AEE4;
       font-size: 18px; }
-    /* line 36, source/stylesheets/_mtenkey.scss */
+    /* line 35, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey .mtenkey-tenkey-ac {
       background: #fcfcfc; }
-    /* line 39, source/stylesheets/_mtenkey.scss */
+    /* line 38, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey th, .mtenkey-tenkey td {
       font-weight: normal;
-      width: 80px;
-      height: 54px;
+      width: 90px;
+      height: 66px;
       text-align: center;
       border: solid .1px #ececec;
       font-size: 22px;
       border-radius: 4px;
       background: white; }
-    /* line 49, source/stylesheets/_mtenkey.scss */
+    /* line 48, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey td:first-child {
       border-left: none; }
-    /* line 52, source/stylesheets/_mtenkey.scss */
+    /* line 51, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey td:last-child {
       border-right: none; }
-    /* line 55, source/stylesheets/_mtenkey.scss */
+    /* line 54, source/stylesheets/_mtenkey.scss */
     .mtenkey-tenkey tr:last-child td, .mtenkey-tenkey .confirm {
       border-bottom: none; }

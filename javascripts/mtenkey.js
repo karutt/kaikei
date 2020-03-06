@@ -18,8 +18,8 @@ $(".mtenkey-tenkey td.number").on("click", function() {
   $(".mtenkey-head-value").html(input)
 })
 
-mw = 320
-mh = 300
+mw = 342
+mh = 360
 bh = $("body").height()
 
 mtenkey_target = 0
@@ -51,6 +51,7 @@ $(".mtenkey .confirm").click(function() {
   $(".triangle").css({display: "none"})
   $(".mtenkey-head-value").html("0")
   mtenkey_target = 0
+  calc_sum()
 })
 
 
