@@ -31,7 +31,7 @@ describe = function() {
 
   for(let key in json) {
     $("."+key).each(function() {
-      json[key] += Number($(this).html())
+      json[key] += (removecomma($(this).html()))
     })
   }
   sum_num = 0
