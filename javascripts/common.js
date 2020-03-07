@@ -48,6 +48,10 @@ window.stock_template = (name, value)=> {
 window.save_history = function(json) {
   localStorage.setItem("local_strage_history", JSON.stringify(json))
 }
+
+window.remove_history = function() {
+  localStorage.removeItem("local_strage_history")
+}
 window.get_history = function() {
   return JSON.parse(localStorage.getItem("local_strage_history"))
 }
