@@ -45,3 +45,9 @@ window.stock_template = (name, value)=> {
   <div class="stock-body-panel-remove">削除</div>
   </div>`
 }
+window.save_history = function(json) {
+  localStorage.setItem("local_strage_history", JSON.stringify(json))
+}
+window.get_history = function() {
+  return JSON.parse(localStorage.getItem("local_strage_history"))
+}

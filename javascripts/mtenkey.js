@@ -66,7 +66,7 @@ $(".mtenkey .confirm").click(function() {
 
 
 $("body").click(function(e) {
-  if(!($(e.target).closest('.mtenkey-head').length | $(e.target).closest('.mtenkey-tenkey-wrapper').length) && turn) {
+  if(!($(e.target).closest('.mtenkey-head').length | $(e.target).closest('.mtenkey-tenkey-wrapper').length) && turn && mtenkey_target) {
     $(".mtenkey").css({display: "none"})
     $(".triangle").css({display: "none"})
     $(".mtenkey-head-value").html("0")

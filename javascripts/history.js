@@ -4,27 +4,61 @@ $(".history").css({width:$("#panel1").width()+"px"})
 height = $("#panel1").height()
 $(".history").css({height:height+"px"})
 
-var $demo1 = $('table.history-table');
+window.$demo1 = $('table.history-table');
 $demo1.floatThead({
   scrollContainer: function($table){
     return $table.closest('.history');
   }
 });
 
-
-// デフォルトheaderの作成
-for(let key of ["時間", "合計", "お預かり"]) {
-  $(".history-table-head").append("<th id="+key+">"+key+"</th>")
+//starageからデーブルを作成
+if(get_history()) {
+  hist = get_history()
+  body = ""
+  // テーブルのボディを作成
+  for(i=0; i<hist["合計"].length; i++) {
+    index = 0
+    row = "<tr class='history-table-body'>"
+    for(let key in hist) {
+      if(index < 3) {
+        t = "<td class='"+ key + "'>"+hist[key][i]+"</td>"
+      } else {
+        t = "<td class='" + key + "' value='" +hist[key][i][0] + "'>"+hist[key][i][1]+"</td>"
+      }
+      row += t
+      index += 1
+    }
+    row = row + "</tr>"
+    body += row
+  }
+  // テーブルのヘッダーを作成
+  index = 0
+  head = ""
+  for(let key in hist) {
+    if(index < 3) {
+      t = "<th id='"+ key + "'>"+key+"</th>"
+    } else {
+      t = "<th id='" + key + "' value='" +hist[key][0][0] + "'>"+key+"</th>"
+    }
+    index += 1
+    head += t
+  }
+  $(".history-table-head").append(head)
+  $(".history-table tbody").append(body)
+} else {
+  // デフォルトでテーブルの作成
+  for(let key of ["時間", "合計", "お預かり"]) {
+    $(".history-table-head").append("<th id="+key+">"+key+"</th>")
+  }
+  insert_th = ""
+  $(".menu-body-list-item").each(function() {
+    stock_name = $(this).children(".name").html()
+    stock_value = $(this).children(".value").html()
+    insert_th += "<th id="+stock_name+" value="+stock_value+">"+ stock_name + "</th>"
+  })
+  $(".history-table-head").append(insert_th)
+  $(".history-table-head").append("<th id='カスタム商品'>カスタム商品</th>")
 }
-insert_th = ""
-$(".menu-body-list-item").each(function() {
-  stock_name = $(this).children(".name").html()
-  stock_value = $(this).children(".value").html()
-  insert_th += "<th id="+stock_name+" value="+stock_value+">"+ stock_name + "</th>"
-})
-$(".history-table-head").append(insert_th)
-$(".history-table-head").append("<th id='カスタム商品'>カスタム商品</th>")
-
 
 
 //メニューヘッダーの追加
@@ -32,9 +66,11 @@ $(".menu-edit-add_btn").click(function() {
   stock_name = $(".menu-body-list-item:last .name").html()
   stock_value = $(".menu-body-list-item:last .value").html()
   insert_th = "<th id="+stock_name+" value="+stock_value+">"+ stock_name + "</th>"
-  insert_td = "<td class='"+stock_name+"'>0</td>"
+  insert_td = "<td class='"+stock_name+"' value='0'>0</td>"
   $(".history-table-head th:last").before(insert_th)
-  $(".history-table-body").each(function() {$(this).children("td").last().before(insert_td)})
+  $(".history-table-body").each(function() {
+    $(this).children("td").last().before(insert_td)
+  })
   $demo1.floatThead('reflow');
 
 })
@@ -116,12 +152,3 @@ $(".edit_history_btn").click(function() {
   }
 
 })
-
-// hist = {}
-// table_to_json = function() {
-//   $(".history-table-head th").each(function() {
-//     key = $(this).html()
-//     hist[key] = []
-//   })
-// }
-// table_to_json()

@@ -978,10 +978,9 @@ thead th {
     content: "¥"; }
 
 /* line 45, source/stylesheets/_history.scss */
-.edit_history_btn {
+.edit_history_btn, .save_history_btn {
   position: absolute;
   bottom: 60px;
-  right: 6%;
   border-radius: 40px;
   background: #20AEE4;
   width: 54px;
@@ -995,13 +994,21 @@ thead th {
   align-items: center;
   flex-direction: row; }
   /* line 56, source/stylesheets/_history.scss */
-  .edit_history_btn:hover {
+  .edit_history_btn:hover, .save_history_btn:hover {
     opacity: 0.8; }
   /* line 60, source/stylesheets/_history.scss */
-  .edit_history_btn img {
+  .edit_history_btn img, .save_history_btn img {
     width: 24px; }
 
-/* line 66, source/stylesheets/_history.scss */
+/* line 65, source/stylesheets/_history.scss */
+.edit_history_btn {
+  right: 6%; }
+
+/* line 68, source/stylesheets/_history.scss */
+.save_history_btn {
+  right: calc(6% + 68px); }
+
+/* line 72, source/stylesheets/_history.scss */
 .triangle {
   position: absolute;
   border: 20px solid transparent;
@@ -1010,11 +1017,11 @@ thead th {
   display: none;
   z-index: 9999999999999; }
 
-/* line 75, source/stylesheets/_history.scss */
+/* line 81, source/stylesheets/_history.scss */
 .floatThead-wrapper {
   z-index: 3; }
 
-/* line 79, source/stylesheets/_history.scss */
+/* line 85, source/stylesheets/_history.scss */
 .edit_cover {
   position: absolute;
   top: 0;
