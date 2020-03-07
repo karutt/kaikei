@@ -99,10 +99,22 @@ $(".finish-btn").click(function() {
     insert_text += "<td class='時間'>"+start+"</td><td class='合計'>"+sum_value+"</td><td class='お預かり'>"+cash+"</td>"
     insert_text += get_stock_data() + get_custom_data()
     insert_text = "<tr class='history-table-body'>" + insert_text + "</tr>"
-    $(".history-table tbody").append(insert_text)
+    $(".history-table tbody").prepend(insert_text)
     $(".stock-body-panel").remove()
     $demo1.floatThead('reflow');
   }
+})
+
+$(".edit_history_btn").click(function() {
+  if (!$(this).hasClass("edit")) {
+    $(this).addClass("edit")
+    $(".edit_cover").fadeIn(100)
+
+  }else {
+    $(this).removeClass("edit")
+    $(".edit_cover").fadeOut(100)
+  }
+
 })
 
 // hist = {}

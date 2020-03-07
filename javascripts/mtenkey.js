@@ -50,8 +50,18 @@ $(".mtenkey .confirm").click(function() {
   $(".mtenkey").css({display: "none"})
   $(".triangle").css({display: "none"})
   $(".mtenkey-head-value").html("0")
+
+  if($(".edit_history_btn").hasClass("edit")) {
+    sum_value = 0
+    mtenkey_target.parent().children("td:nth-child(n+4)").each(function() {
+      sum_value += Number($(this).attr("value")) * Number($(this).html())
+    })
+    mtenkey_target.parent().children(".合計").html(sum_value)
+    mtenkey_target.css({backgroundColor: "#fff"})
+  } else {
+    calc_sum()
+  }
   mtenkey_target = 0
-  calc_sum()
 })
 
 
@@ -60,9 +70,33 @@ $("body").click(function(e) {
     $(".mtenkey").css({display: "none"})
     $(".triangle").css({display: "none"})
     $(".mtenkey-head-value").html("0")
+    mtenkey_target.css({backgroundColor: "#fff"})
     mtenkey_target = 0
   }
   if (mtenkey_target) {
     turn = 1
   }
 });
+
+$(".history-table").on("click", "td:nth-child(n+3)", function() {
+  if($(".edit_history_btn").hasClass("edit")) {
+    mtenkey_target = $(this)
+    ow = $(this).outerWidth()
+    oh = $(this).outerHeight()
+    x = $(this).offset().left
+    y = $(this).offset().top
+    if(y+oh/2 + mh/2 > bh ) {
+      t = bh - mh
+    } else if( y+oh/2 - mh/2 < 0) {
+      t = 0
+    } else {
+      t = (y+oh/2) - mh/2
+    }
+    mtenkey_target.css({backgroundColor: "rgb(245, 253, 255)"})
+    $(".mtenkey").css({left: x-mw-60, top:t})
+    $(".mtenkey").css({display: "block"})
+    $(".triangle").css({display: "none"})
+    $(".triangle").css({display: "block", left: x-18, top: y+oh/2-20})
+    turn = 0
+  }
+})
